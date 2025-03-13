@@ -20,7 +20,7 @@ export function AboutSection() {
   }
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-background">
+    <section id="about" className="py-20 bg-gray-50 dark:bg-[#0B0B0D]">
       <div className="container-custom">
         <div className="mb-16">
           <div className="flex items-center gap-2 mb-6">
@@ -65,7 +65,7 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="relative  "
           >
-            <div className="rounded-lg overflow-hidden shadow-xl">
+            <div className="rounded-lg overflow-hidden shadow-2xl">
               <Image
                 src="/dp.jpg"
                 alt="Profile Picture"
@@ -115,7 +115,7 @@ export function AboutSection() {
 
             <div className="flex flex-wrap gap-4">
               <Button>Download CV</Button>
-              <Button variant="outline">View LinkedIn</Button>
+              <Button variant="outline"><a href="https://www.linkedin.com/in/sabbir-tanvir/">View LinkedIn</a></Button>
             </div>
           </motion.div>
         </div>

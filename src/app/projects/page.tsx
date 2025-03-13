@@ -108,10 +108,10 @@ export default function ProjectsPage() {
       );
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-[#0B0B0D]">
       <Navbar />
       <main className="flex-1 pt-16">
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-gray-50 dark:bg-[#0B0B0D]">
           <div className="container-custom">
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-6">

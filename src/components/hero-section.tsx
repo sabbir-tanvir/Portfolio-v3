@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
-    <section className="pt-32 pb-20 md:pt-40 md:pb-28">
+    <section className="pt-32 pb-20 md:pt-40  bg-gray-50 dark:bg-[#0B0B0D]  md:pb-28">
       <div className="container-custom">
         <div className="space-y-6 max-w-3xl">
           <motion.div
@@ -34,7 +34,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <p className="text-muted-foreground text-lg max-w-2xl">
+            <p className="text-muted-foreground  text-lg max-w-2xl">
               I work with brands globally to build pixel-perfect, engaging, and accessible
               digital experiences that drive results and achieve business goals.
             </p>
@@ -46,16 +46,16 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-wrap gap-4 pt-4"
           >
-            <Link href="https://www.linkedin.com/in/devraj-chatribin/" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.linkedin.com/in/sabbir-tanvir/" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="sm">LinkedIn</Button>
             </Link>
-            <Link href="https://github.com/DevrajDC" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/sabbir-tanvir" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="sm">GitHub</Button>
             </Link>
-            <Link href="https://www.instagram.com/devraj_uiux/" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.instagram.com/sabbir_x_tanvir/" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="sm">Instagram</Button>
             </Link>
-            <Link href="mailto:devrajchatribin9978@gmail.com" target="_blank" rel="noopener noreferrer">
+            <Link href="mailto:sabbirmahmudtanvir@gmail.com" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="sm">Gmail</Button>
             </Link>
           </motion.div>

@@ -83,10 +83,10 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-[#0B0B0D]">
       <Navbar />
       <main className="flex-1 pt-16">
-        <section className="py-20 bg-gray-50  dark:bg-[#0B0B0D]">
+        <section className="py-20 ">
           <div className="container-custom">
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-6">
@@ -259,14 +259,14 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
-              className="max-w-3xl mx-auto"
+              className="max-w-3xl mx-auto "
             >
-              <Accordion type="single" collapsible className="space-y-4">
+              <Accordion type="single" collapsible className="space-y-4 ">
                 {faqs.map((faq, index) => (
                   <AccordionItem
                     key={index}
                     value={`item-${index}`}
-                    className="border border-gray-800 rounded-lg overflow-hidden"
+                    className="border border-gray-800 bg-white dark:bg-[#0B0B0D] rounded-lg overflow-hidden"
                   >
                     <AccordionTrigger className="px-6 py-4 hover:no-underline ">
                       <span className="text-base font-medium">

@@ -118,11 +118,11 @@ const services = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-[#0B0B0D]">
       <Navbar />
       <main className="flex-1 pt-16">
         {/* Hero Section */}
-        <section className="pt-24 pb-16 md:pt-32 md:pb-24 dark:bg-[#0B0B0D]">
+        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gray-50 dark:bg-[#0B0B0D]">
           <div className="container-custom">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
@@ -158,7 +158,7 @@ export default function AboutPage() {
                   that drive results and achieve business goals.
                 </p>
                 <Link href="/resume" target="_blank">
-                  <Button className="rounded-full bg-white text-black hover:bg-gray-200">
+                  <Button className="rounded-full bg-black text-white  dark:bg-white dark:text-black hover:bg-gray-700">
                     My Resume
                   </Button>
                 </Link>
@@ -171,7 +171,7 @@ export default function AboutPage() {
         </section>
 
         {/* Skills Showcase */}
-        <section className="py-16 bg-white dark:bg-[#0B0B0D]">
+        <section className="py-16 bg-gray-50 dark:bg-[#0B0B0D]">
           <div className="container-custom">
             <div className="flex flex-wrap gap-2 justify-center">
               {techSkills.map((skill, index) => (
@@ -191,7 +191,7 @@ export default function AboutPage() {
         </section>
 
         {/* Work History */}
-        <section className="py-20 bg-white dark:bg-[#0B0B0D]">
+        <section className="py-20 bg-gray-50 dark:bg-[#0B0B0D]">
           <div className="container-custom">
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-6">
@@ -245,7 +245,7 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                   viewport={{ once: true }}
-                  className="p-4 border border-gray-800 rounded-lg"
+                  className="p-4 border border-gray-300 bg-white dark:bg-[#0B0B0D] rounded-lg"
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-gray-800 overflow-hidden relative flex-shrink-0">
@@ -276,7 +276,7 @@ export default function AboutPage() {
         </section>
 
         {/* Design Process */}
-        <section className="py-20 bg-white dark:bg-[#0B0B0D]">
+        <section className="py-20 bg-gray-50 dark:bg-[#0B0B0D]">
           <div className="container-custom">
             <div className="mb-16">
               <div className="flex items-center gap-2 mb-6">
@@ -344,7 +344,7 @@ export default function AboutPage() {
         </section>
 
         {/* Awards Section */}
-        <section className="py-20 bg-white dark:bg-[#0B0B0D]">
+        <section className="py-20 bg-gray-50 dark:bg-[#0B0B0D]">
           <div className="container-custom">
             <div className="mb-16">
               <div className="flex items-center gap-2 mb-6">

@@ -53,7 +53,7 @@ export function ProjectShowcase() {
       );
 
   return (
-    <section className="py-20 bg-white dark:bg-[#0B0B0D]">
+    <section className="py-20 bg-gray-50 dark:bg-[#0B0B0D]">
       <div className="container-custom">
         <div className="mb-12">
           <div className="flex items-center gap-2 mb-6">

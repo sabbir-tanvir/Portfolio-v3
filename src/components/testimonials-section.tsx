@@ -13,7 +13,7 @@ const testimonials = [
     name: "Rummon Khan",
     position: "Team Mate",
     content:
-      "I am amazed at Sabbir's ability to create intriguing designs. He is really coll guy to work with and so Leader like attitude",
+      "I am amazed at Sabbir's ability to create intriguing designs. He is really cool guy to work with and so Leader like attitude",
     image: "/rumon.jpg",
   },
   {
@@ -43,7 +43,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-[#0B0B0D]">
+    <section className="py-20 bg-gray-50 dark:bg-[#0B0B0D]">
       <div className="container-custom">
         <div className="mb-16">
           <div className="flex items-center gap-2 mb-6">

@@ -60,7 +60,7 @@ export function SkillsSection() {
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-[#0B0B0D]   border-border">
+    <section className="py-20 bg-gray-50 dark:bg-[#0B0B0D]   border-border">
       <div className="container-custom">
         <div className="mb-16">
           <div className="flex items-center gap-2 mb-6">
@@ -106,17 +106,17 @@ export function SkillsSection() {
                 if (value) setActiveTab(value);
               }}
             >
-              <AccordionItem value="development" className="border-none mb-4">
+              <AccordionItem value="development" className="border-none bg-white dark:bg-[#0B0B0D]  mb-4">
                 <AccordionTrigger className={`w-full justify-start text-left p-4 border rounded-lg no-underline ${
                   activeTab === "development" ? "border-foreground dark:border-foreground" : "border-border dark:border-border"
                 }`}>
-                  <div className="flex items-center text-lg font-semibold gap-2 text-foreground dark:text-foreground">
+                  <div className="flex items-center text-lg font-semibold gap-2  text-foreground dark:text-foreground">
                     <span className="text-xl">💻</span>
                     <span>Development</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="pt-6 px-2">
-                  <div className="grid grid-cols-4 sm:grid-cols-6 gap-8 mt-2">
+                <AccordionContent className="pt-6 px-2 ">
+                  <div className="grid grid-cols-4 sm:grid-cols-6  gap-8 mt-2">
                     {skills.development
                       .filter(skill => skill.icon) // Only show skills with icons
                       .map((skill, index) => (
@@ -135,7 +135,7 @@ export function SkillsSection() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="design" className="border-none mb-4">
+              <AccordionItem value="design" className="border-none bg-white dark:bg-[#0B0B0D] mb-4">
                 <AccordionTrigger className={`w-full justify-start text-left p-4 border rounded-lg no-underline ${
                   activeTab === "design" ? "border-foreground dark:border-foreground" : "border-border dark:border-border"
                 }`}>
@@ -158,7 +158,7 @@ export function SkillsSection() {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="branding" className="border-none">
+              <AccordionItem value="branding" className="border-none bg-white dark:bg-[#0B0B0D]">
                 <AccordionTrigger className={`w-full justify-start text-left p-4 border rounded-lg no-underline ${
                   activeTab === "branding" ? "border-foreground dark:border-foreground" : "border-border dark:border-border"
                 }`}>
