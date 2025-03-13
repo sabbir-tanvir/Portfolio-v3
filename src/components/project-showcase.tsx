@@ -11,36 +11,38 @@ const categories = ["All", "Development", "Design"];
 const projects = [
   {
     id: 1,
-    title: "Aora",
-    category: "Development",
+    title: "Annonymous Chat App",
+    category: "Development & Design",
     year: "2024",
-    image: "https://web-assets.same.dev/1549414337/849522504.jpeg",
+    image: "/p1.png",
     href: "/projects/aora",
   },
   {
     id: 2,
-    title: "Code Screenshot",
+    title: "Online Banking App",
     category: "Development & Design",
     year: "2024",
-    image: "https://web-assets.same.dev/652882074/849522504.jpeg",
+    image: "/p2.png",
     href: "/projects/code-screenshot",
   },
   {
     id: 3,
-    title: "iPhone 15 Pro",
+    title: "Sage Ai",
     category: "Development & Design",
     year: "2024",
-    image: "https://web-assets.same.dev/2037933060/849522504.jpeg",
-    href: "/projects/iphone",
+    image: "/p3.png",
+    href: "/projects/code-screenshot",
   },
   {
     id: 4,
-    title: "Ochi Design",
+    title: "Sage Ai",
     category: "Development & Design",
     year: "2024",
-    image: "https://web-assets.same.dev/55958492/849522504.jpeg",
-    href: "/projects/ochi-design",
+    image: "/p33.png",
+    href: "/projects/code-screenshot",
   },
+
+
 ];
 
 export function ProjectShowcase() {
