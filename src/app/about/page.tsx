@@ -122,7 +122,7 @@ export default function AboutPage() {
       <Navbar />
       <main className="flex-1 pt-16">
         {/* Hero Section */}
-        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-[#0d0d0d]">
+        <section className="pt-24 pb-16 md:pt-32 md:pb-24 dark:bg-[#0B0B0D]">
           <div className="container-custom">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
@@ -171,7 +171,7 @@ export default function AboutPage() {
         </section>
 
         {/* Skills Showcase */}
-        <section className="py-16 bg-[#0d0d0d]">
+        <section className="py-16 bg-white dark:bg-[#0B0B0D]">
           <div className="container-custom">
             <div className="flex flex-wrap gap-2 justify-center">
               {techSkills.map((skill, index) => (
@@ -181,7 +181,7 @@ export default function AboutPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: 0.05 * index }}
                 >
-                  <div className="px-4 py-2 bg-[#151515] rounded-full text-sm">
+                  <div className="px-4 py-2 bg-white shadow-md dark:bg-gray-900 dark:hover:bg-gray-700 rounded-full text-sm">
                     {skill}
                   </div>
                 </motion.div>
@@ -191,7 +191,7 @@ export default function AboutPage() {
         </section>
 
         {/* Work History */}
-        <section className="py-20 bg-[#0a0a0a]">
+        <section className="py-20 bg-white dark:bg-[#0B0B0D]">
           <div className="container-custom">
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-6">
@@ -268,7 +268,7 @@ export default function AboutPage() {
             </div>
 
             <div className="flex justify-center mt-8">
-              <Button variant="outline" className="rounded-full border-gray-800 hover:bg-black/30">
+              <Button variant="outline" className="rounded-full border-gray-800 hover:bg-black/10">
                 Show More
               </Button>
             </div>
@@ -276,7 +276,7 @@ export default function AboutPage() {
         </section>
 
         {/* Design Process */}
-        <section className="py-20 bg-[#0d0d0d]">
+        <section className="py-20 bg-white dark:bg-[#0B0B0D]">
           <div className="container-custom">
             <div className="mb-16">
               <div className="flex items-center gap-2 mb-6">
@@ -330,7 +330,7 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                   viewport={{ once: true }}
-                  className="p-6 bg-[#151515] rounded-lg"
+                  className="p-6 bg-white dark:bg-[#151515] shadow-md rounded-lg"
                 >
                   <div className="w-12 h-12 rounded-full bg-[#222222] flex items-center justify-center mb-4">
                     <span className="text-xl">{index === 0 ? "📊" : index === 1 ? "🖌️" : index === 2 ? "🎨" : "💻"}</span>
@@ -344,7 +344,7 @@ export default function AboutPage() {
         </section>
 
         {/* Awards Section */}
-        <section className="py-20 bg-[#0a0a0a]">
+        <section className="py-20 bg-white dark:bg-[#0B0B0D]">
           <div className="container-custom">
             <div className="mb-16">
               <div className="flex items-center gap-2 mb-6">
@@ -399,7 +399,7 @@ export default function AboutPage() {
         </section>
 
         {/* Community Section */}
-        <section className="py-20 bg-[#0d0d0d]">
+        {/* <section className="py-20 bg-[#0d0d0d]">
           <div className="container-custom">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
@@ -514,7 +514,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <ContactCTA />
       </main>

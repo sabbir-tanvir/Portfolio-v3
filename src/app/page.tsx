@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar";
 import HeroSection from "@/components/hero-section";
+import { AboutSection } from "@/components/about-section";
 import { ProjectShowcase } from "@/components/project-showcase";
 import { SkillsSection } from "@/components/skills-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <HeroSection />
+        <AboutSection />
         <ProjectShowcase />
         <SkillsSection />
         <TestimonialsSection />

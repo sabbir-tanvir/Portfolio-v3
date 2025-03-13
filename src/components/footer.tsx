@@ -46,7 +46,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-white dark:bg-[#0B0B0D] border-t border-border py-10">
+    <footer className="bg-gray-100 dark:bg-[#0B0B0D] border-t border-border py-10">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Description */}

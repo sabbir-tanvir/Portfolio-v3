@@ -86,7 +86,7 @@ export default function ContactPage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1 pt-16">
-        <section className="py-20 bg-[#0d0d0d]">
+        <section className="py-20 bg-gray-50  dark:bg-[#0B0B0D]">
           <div className="container-custom">
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-6">
@@ -135,7 +135,7 @@ export default function ContactPage() {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="bg-[#151515] border-gray-800 h-12"
+                      className="dark:bg-[#0B0B0D] bg-white border-gray-800 h-12"
                       required
                     />
                   </div>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="bg-[#151515] border-gray-800 h-12"
+                      className="dark:bg-[#0B0B0D] bg-white border-gray-800 h-12"
                       required
                     />
                   </div>
@@ -162,7 +162,7 @@ export default function ContactPage() {
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      className="bg-[#151515] border-gray-800 min-h-[150px]"
+                      className="dark:bg-[#0B0B0D] bg-white border-gray-800 min-h-[150px]"
                       required
                     />
                   </div>
@@ -178,7 +178,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="bg-[#151515] p-6 rounded-2xl"
+                className="dark:bg-[#17171b7a] bg-white p-6 h-[85%] mt-3  rounded-2xl"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
@@ -218,7 +218,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="py-20 bg-[#0a0a0a]">
+        <section className="py-20 dark:bg-[#0B0B0D] bg-gray-50">
           <div className="container-custom">
             <div className="mb-12">
               <div className="flex items-center gap-2 mb-6">
@@ -268,7 +268,7 @@ export default function ContactPage() {
                     value={`item-${index}`}
                     className="border border-gray-800 rounded-lg overflow-hidden"
                   >
-                    <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-[#151515]">
+                    <AccordionTrigger className="px-6 py-4 hover:no-underline ">
                       <span className="text-base font-medium">
                         0{index + 1}. {faq.question}
                       </span>
