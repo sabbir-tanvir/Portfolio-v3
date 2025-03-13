@@ -122,10 +122,13 @@ export function SkillsSection() {
                       .map((skill, index) => (
                         <div key={skill.name} className="flex flex-col items-center gap-2">
                           <div className="w-10 h-10 flex items-center justify-center">
-                            <img
+                            <Image
                               src={skill.icon}
                               alt={skill.name}
+                              width={40}
+                              height={40}
                               className="w-full h-full object-contain"
+                              unoptimized={skill.icon.includes('svg')}
                             />
                           </div>
                           <span className="text-xs text-center text-foreground dark:text-foreground">{skill.name}</span>
