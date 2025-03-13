@@ -40,14 +40,14 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
           ? "py-3"
           : "py-5"
       }`}
     >
       <div
-        className={`mx-auto transition-all duration-300 ${
+        className={`mx-auto transition-all duration-500 ${
           isScrolled
             ? "max-w-[86%] lg:max-w-[45%] bg-background/80 backdrop-blur-lg border border-border rounded-full px-5 py-2"
             : "container-custom"
