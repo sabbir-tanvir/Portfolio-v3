@@ -24,6 +24,13 @@ const testimonials = [
       "I had the pleasure of collaborating with Sabbir on a project where his exceptional UI/UX skills truly shone. Sabbir's design proficiency is remarkable, consistently delivering top-notch work that elevates user experiences. His creativity and keen eye for detail make him an admirable asset when it comes to design work.",
     image: "/rumon.jpg",
   },
+  {
+    id: 3,
+    name: "Mohammad Rasel",
+    position: "Team Mate",
+    content: " I have worked with Sabbir on a number of projects and I have always been impressed with his design skills. He is a great team player and always brings a positive attitude to the table. I would highly recommend Sabbir for any design project.",
+    image: "/rasel.jpg",
+  },
 
 ];
 
