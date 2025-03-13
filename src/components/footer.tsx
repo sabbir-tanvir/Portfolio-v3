@@ -23,17 +23,17 @@ export default function Footer() {
   const socialLinks = [
     {
       label: "Twitter",
-      href: "https://twitter.com/example",
+      href: "https://x.com/sabbir__tanvir",
       icon: <Twitter size={16} />
     },
     {
       label: "LinkedIn",
-      href: "https://linkedin.com/in/example",
+      href: "https://linkedin.com/in/sabbir-tanvir",
       icon: <Linkedin size={16} />
     },
     {
       label: "GitHub",
-      href: "https://github.com/example",
+      href: "https://github.com/sabbir-tanvir",
       icon: <Github size={16} />
     }
   ];
@@ -99,10 +99,10 @@ export default function Footer() {
               Contact
             </h3>
             <p className="text-muted-foreground dark:text-muted-foreground mb-2">
-              hello@example.com
+              sabbirmahmudtanvir@example.com
             </p>
             <p className="text-muted-foreground dark:text-muted-foreground">
-              San Francisco, CA
+              Dhaka, Bangladesh
             </p>
           </div>
         </div>
