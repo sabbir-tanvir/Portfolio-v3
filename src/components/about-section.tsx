@@ -30,8 +30,9 @@ export function AboutSection() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <div className="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center">
-                <span className="text-xs font-bold text-white">👋</span>
+              <div className="w-5 h-5 rounded-full bg-green-300 flex items-center justify-center">
+                <span className="text-xs font-bold text-white">🧑‍💻
+                </span>
               </div>
             </motion.div>
             <motion.h2
@@ -52,7 +53,7 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="section-heading text-foreground dark:text-foreground"
           >
-            My Journey & Experience
+            My Journey 
           </motion.h2>
         </div>
 
@@ -66,7 +67,7 @@ export function AboutSection() {
           >
             <div className="rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/public/dp.jpg"
+                src="/dp.jpg"
                 alt="Devraj Chatribin"
                 width={600}
                 height={600}
@@ -85,7 +86,7 @@ export function AboutSection() {
             <h3 className="text-2xl font-bold mb-4 text-foreground dark:text-foreground">Software Engineer & UI/UX Designer</h3>
             
             <p className="text-muted-foreground dark:text-muted-foreground mb-6">
-              With over 5 years of experience in software engineering and design, I'm passionate
+              With over 3 years of experience in software engineering and design, I'm passionate
               about creating intuitive and engaging digital experiences. My expertise spans
               frontend and backend development, with a special focus on user interface design.
             </p>
@@ -95,15 +96,15 @@ export function AboutSection() {
               <ul className="space-y-2">
                 <li className="flex items-center text-muted-foreground dark:text-muted-foreground">
                   <span className="mr-2">→</span> 
-                  Frontend development with React, Next.js, and TypeScript
+                  Frontend development with Html, CSS, Javascript, React and Next.js
                 </li>
                 <li className="flex items-center text-muted-foreground dark:text-muted-foreground">
                   <span className="mr-2">→</span> 
-                  UI/UX design using Figma and Adobe Creative Suite
+                  UI/UX design using Figma
                 </li>
                 <li className="flex items-center text-muted-foreground dark:text-muted-foreground">
                   <span className="mr-2">→</span> 
-                  Backend development with Node.js and Java
+                  Backend development with Node.js, Express.js, Docker, Prisma, MongoDB, PostgreSQL
                 </li>
                 <li className="flex items-center text-muted-foreground dark:text-muted-foreground">
                   <span className="mr-2">→</span> 
