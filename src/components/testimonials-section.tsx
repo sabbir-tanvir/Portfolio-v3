@@ -29,7 +29,7 @@ const testimonials = [
     name: "Mohammad Rasel",
     position: "Team Mate",
     content: " I have worked with Sabbir on a number of projects and I have always been impressed with his design skills. He is a great team player and always brings a positive attitude to the table. I would highly recommend Sabbir for any design project.",
-    image: "/rasel.jpg",
+    image: "/rasel.png",
   },
 
 ];
