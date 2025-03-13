@@ -17,18 +17,14 @@ const techSkills = [
   "TypeScript",
   "React.js",
   "Next.js",
-  "Angular",
-  "Redux",
   "Node.js",
   "Express.js",
   "MySQL",
   "MongoDB",
   "PostgreSQL",
-  "Cypress",
   "Docker",
-  "Firebase",
+  "Jwt",
   "AWS",
-  "GSAP",
   "Framer Motion",
   "Figma",
   "Tailwind CSS",
@@ -37,28 +33,16 @@ const techSkills = [
 
 const workExperience = [
   {
-    title: "Software Engineer",
-    company: "OneShield Software",
-    period: "Aug 2022 - Present",
+    title: "Founder and CEO",
+    company: "Medihub",
+    period: "Aug 2024 - Present",
     logo: "https://web-assets.same.dev/1579400925/849522504.jpeg",
   },
   {
     title: "Founder",
-    company: "Design and Code",
-    period: "Jan 2021 - Present",
-    logo: "https://web-assets.same.dev/1638053460/849522504.jpeg",
-  },
-  {
-    title: "UI/UX Designer",
-    company: "Social3",
-    period: "Aug 2022 - Sep 2023",
-    logo: "https://web-assets.same.dev/786759337/849522504.jpeg",
-  },
-  {
-    title: "UI/UX Design Lead",
-    company: "CrossKnot Community",
-    period: "Oct 2021 - Apr 2022",
-    logo: "https://web-assets.same.dev/1254265958/849522504.jpeg",
+    company: "Send Me",
+    period: "Jan 2023 - Present",
+    logo: "/send.jpg",
   },
 ];
 
@@ -91,10 +75,10 @@ const designSteps = [
 ];
 
 const awards = [
-  { title: "Star Performer of the Year", date: "May 2021" },
-  { title: "Best Beginner Hack", date: "Apr 2021" },
-  { title: "Sketch Webpage Contest Winner", date: "Nov 2020" },
-  { title: "Best Space App Winner", date: "Sep 2021" },
+  { title: "Star Performer of the Year", date: "May 2024" },
+  { title: "Best Beginner Hack", date: "Apr 2024" },
+  { title: "Sketch Webpage Contest Winner", date: "Nov 2021" },
+  { title: "Best Space App Winner", date: "Sep 2023" },
 ];
 
 const services = [
@@ -120,9 +104,9 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-[#0B0B0D]">
       <Navbar />
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-10">
         {/* Hero Section */}
-        <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gray-50 dark:bg-[#0B0B0D]">
+        <section className="pt-10 pb-16 md:pt-32 md:pb-24 bg-gray-50 dark:bg-[#0B0B0D]">
           <div className="container-custom">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
@@ -133,12 +117,12 @@ export default function AboutPage() {
                 transition={{ duration: 0.5 }}
                 className="order-2 md:order-1"
               >
-                <div className="relative w-full max-w-[400px] mx-auto aspect-square overflow-hidden rounded-t-md md:rounded-lg">
+                <div className="relative hover:scale-105 transition-transform duration-300 shadow-2xl w-full max-w-[500px] mx-auto aspect-square overflow-hidden rounded-t-md md:rounded-lg">
                   <Image
                     src="/dp.jpg"
                     alt="Sabbir Tanvir"
                     fill
-                    className="object-cover"
+                    className="object-cover rounded-md "
                   />
                 </div>
               </motion.div>
@@ -308,7 +292,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="section-heading"
               >
-                My Design Process
+                My Development Process
               </motion.h2>
 
               <motion.p
