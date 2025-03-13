@@ -21,7 +21,7 @@ const testimonials = [
     name: "rummon Khan",
     position: "Team Mate",
     content:
-      "I had the pleasure of collaborating with Devraj on a project where his exceptional UI/UX skills truly shone. Devraj's design proficiency is remarkable, consistently delivering top-notch work that elevates user experiences. His creativity and keen eye for detail make him an admirable asset when it comes to design work.",
+      "I had the pleasure of collaborating with Sabbir on a project where his exceptional UI/UX skills truly shone. Sabbir's design proficiency is remarkable, consistently delivering top-notch work that elevates user experiences. His creativity and keen eye for detail make him an admirable asset when it comes to design work.",
     image: "/rumon.jpg",
   },
 
