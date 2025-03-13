@@ -10,36 +10,21 @@ import Image from "next/image";
 const testimonials = [
   {
     id: 1,
-    name: "Vritika Naik",
-    position: "Regional Head @GirlScript",
+    name: "Rummon Khan",
+    position: "Team Mate",
     content:
-      "I am amazed at Devraj's ability to create intriguing designs. At GirlScript, Devraj not only worked with graphic designing but also designed the UI and contributed to the front end of the website. His work ethics are immaculate. His deliveries were always very well executed before time.",
-    image: "https://web-assets.same.dev/3794213157/849522504.jpeg",
+      "I am amazed at Sabbir's ability to create intriguing designs. He is really coll guy to work with and so Leader like attitude",
+    image: "/rumon.jpg",
   },
   {
     id: 2,
-    name: "Amrit Raj",
-    position: "Senior Developer @Ignite Solutions",
+    name: "rummon Khan",
+    position: "Team Mate",
     content:
       "I had the pleasure of collaborating with Devraj on a project where his exceptional UI/UX skills truly shone. Devraj's design proficiency is remarkable, consistently delivering top-notch work that elevates user experiences. His creativity and keen eye for detail make him an admirable asset when it comes to design work.",
-    image: "https://web-assets.same.dev/624887732/849522504.jpeg",
+    image: "/rumon.jpg",
   },
-  {
-    id: 3,
-    name: "Divya Walia",
-    position: "Senior Java Developer @Nagarro",
-    content:
-      "I am writing to highly recommend Devraj for any Java fullstack role. I have had the pleasure of working with Devraj for the past two years at Oneshield, where he has consistently demonstrated strong technical skills and a collaborative attitude. Devraj played a pivotal role in building the application.",
-    image: "/testimonials/divya.jpg",
-  },
-  {
-    id: 4,
-    name: "Elavarasan Muthuvalavan",
-    position: "Technical Lead @Ignite Solutions",
-    content:
-      "I had the pleasure of working alongside Devraj, who is an exceptional professional with an impressive command of Angular Templates, and CSS3. Beyond his technical prowess, what truly sets Devraj apart is his keen observational skills and ability to ask relevant questions that elevate the entire team.",
-    image: "/testimonials/elavarasan.jpg",
-  },
+
 ];
 
 export function TestimonialsSection() {
@@ -58,7 +43,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="py-20 dark:bg-[#0B0B0D]">
+    <section className="py-20 bg-white dark:bg-[#0B0B0D]">
       <div className="container-custom">
         <div className="mb-16">
           <div className="flex items-center gap-2 mb-6">
@@ -100,7 +85,7 @@ export function TestimonialsSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <Card className="bg-[#0f0f0f] border-gray-800 p-8 mb-6">
+          <Card className="bg-white dark:bg-[#0B0B0D] border-[#52525438] p-8 mb-6">
             <div className="flex gap-8 flex-col md:flex-row">
               <div className="flex-shrink-0">
                 <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-gray-700">
@@ -115,7 +100,7 @@ export function TestimonialsSection() {
                 </div>
               </div>
               <div className="space-y-4">
-                <p className="text-lg leading-relaxed text-gray-300">
+                <p className="text-lg leading-relaxed text-black dark:text-white">
                   "{testimonials[currentIndex].content}"
                 </p>
                 <div>

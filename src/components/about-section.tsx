@@ -63,14 +63,14 @@ export function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative  "
           >
             <div className="rounded-lg overflow-hidden shadow-xl">
               <Image
                 src="/dp.jpg"
-                alt="Devraj Chatribin"
-                width={600}
-                height={600}
+                alt="Profile Picture"
+                width={400}
+                height={400}
                 className="w-full object-cover"
               />
             </div>

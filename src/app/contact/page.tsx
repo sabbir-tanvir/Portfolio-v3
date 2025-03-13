@@ -15,7 +15,7 @@ import Image from "next/image";
 const faqs = [
   {
     question: "What is your current role?",
-    answer: "I am currently working as a Software Engineer, specializing in frontend development with a focus on UI/UX design. I also founded and lead Design & Code, a global community for designers and developers."
+    answer: "Im currently Building few project Hoping that might help the user and solve some real life problem ."
   },
   {
     question: "How much does it cost for a high performing website?",
