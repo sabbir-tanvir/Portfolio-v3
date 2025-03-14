@@ -34,27 +34,27 @@ const faqs = [
 const socialLinks = [
   {
     icon: <Linkedin className="w-5 h-5" />,
-    href: "https://www.linkedin.com/in/devraj-chatribin/",
+    href: "https://www.linkedin.com/in/sabbir-tanvir/",
     label: "LinkedIn",
   },
   {
     icon: <Github className="w-5 h-5" />,
-    href: "https://github.com/DevrajDC",
+    href: "https://github.com/sabbir-tanvir",
     label: "GitHub",
   },
   {
     icon: <Instagram className="w-5 h-5" />,
-    href: "https://www.instagram.com/devraj_uiux/",
+    href: "https://www.instagram.com/sabbir_x_tanvir/",
     label: "Instagram",
   },
   {
     icon: <Mail className="w-5 h-5" />,
-    href: "mailto:devrajchatribin9978@gmail.com",
+    href: "mailto:sabbirmahmudtanvir@gmail.com",
     label: "Email",
   },
   {
     icon: <Twitter className="w-5 h-5" />,
-    href: "https://twitter.com/devrajchatribin",
+    href: "https:/x.com/sabbir__tanvie",
     label: "Twitter",
   },
 ];
