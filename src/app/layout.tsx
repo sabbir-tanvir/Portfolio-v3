@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/dp3.jpg", // Path to image in public folder
+        url: "https://sabbir-tanvir.netlify.app/dp3.jpg", // Full absolute URL
         width: 1200,
         height: 630,
         alt: "Sabbir Tanvir",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sabbir Tanvir — Software Engineer",
     description: "Discover a skilled Software Engineer and UI/UX Designer, renowned for creating impactful software that achieves exceptional results.",
-    images: ["/dp3.jpg"], // Already correctly referencing the public folder
+    images: ["https://sabbir-tanvir.netlify.app/dp3.jpg"], // Full absolute URL
   },
 };
 
