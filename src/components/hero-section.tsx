@@ -26,9 +26,21 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-tight"
+                  style={{
+                    fontFamily: '__ClashDisplay_f44f1f, __ClashDisplay_Fallback_f44f1f, sans-serif',
+                    fontWeight: 600,
+                    lineHeight: '1.1',
+                  }}>
                 Crafting{" "}
-                <span className="text-[#90c797]">purpose driven experiences</span>{" "}
+                <span 
+                  className="text-[rgb(48,175,91)]"
+                  style={{
+                    fontFamily: '__ClashDisplay_f44f1f, __ClashDisplay_Fallback_f44f1f, sans-serif',
+                    fontWeight: 600,
+                  }}>
+                  purpose driven experiences
+                </span>{" "}
                 that inspire & engage.
               </h1>
             </motion.div>

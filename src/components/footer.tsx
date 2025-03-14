@@ -14,6 +14,14 @@ export default function Footer() {
     setMounted(true);
   }, []);
 
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   if (!mounted) {
     return null;
   }
@@ -49,9 +57,11 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { name: "Home",
+    { 
+      name: "Scroll to Top",
       icon: <ArrowUpFromDot size={16} />,
-       href: "/" },
+      id: "scroll-top"
+    },
   ];
 
   return (
@@ -66,17 +76,18 @@ export default function Footer() {
           </p>
           </div>
 
-          <div className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer  ">
+          <div className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer">
           {quickLinks.map((link) => (
                 <div key={link.name}>
-                  <Link 
-                    href={link.href}
+                  <button 
+                    onClick={scrollToTop}
+                    aria-label={link.name}
+                    className="hover:text-foreground dark:hover:text-foreground transition-colors text-black dark:text-muted-foreground"
                   >
                     {link.icon}
-                  </Link>
+                  </button>
                 </div>
               ))}
-
           </div>
 
           <div className="flex gap-4">
