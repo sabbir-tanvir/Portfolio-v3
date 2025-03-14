@@ -119,7 +119,7 @@ export default function AboutPage() {
               >
                 <div className="relative hover:scale-105 transition-transform duration-300 shadow-2xl w-full max-w-[500px] mx-auto aspect-square overflow-hidden rounded-t-md md:rounded-lg">
                   <Image
-                    src="/dp.jpg"
+                    src="/dp3.jpg"
                     alt="Sabbir Tanvir"
                     fill
                     className="object-cover rounded-md "

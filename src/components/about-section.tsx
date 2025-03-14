@@ -57,24 +57,23 @@ export function AboutSection() {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="relative  "
+            className="flex   items-center justify-center "
           >
-            <div className="rounded-lg overflow-hidden shadow-2xl">
+            <div className="rounded-lg ">
               <Image
                 src="/dp.jpg"
                 alt="Profile Picture"
                 width={400}
                 height={400}
-                className="w-full object-cover"
+                className="object-center relative rounded-lg hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-muted dark:bg-muted rounded-lg z-[-1]"></div>
           </motion.div>
 
           <motion.div
