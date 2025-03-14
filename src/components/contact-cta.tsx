@@ -19,7 +19,7 @@ export function ContactCTA() {
   }
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-[#0B0B0D]">
+    <section className="py-10 bg-gray-50 dark:bg-[#0B0B0D]">
       <div className="container-custom  ">
         <div className=" rounded-3xl relative bg-white dark:bg-[#111116] shadow-md">
           <div className="absolute inset-0">
