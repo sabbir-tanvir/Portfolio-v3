@@ -69,8 +69,8 @@ export function AboutSection() {
               <Image
                 src="/dp.jpg"
                 alt="Profile Picture"
-                width={400}
-                height={400}
+                width={450}
+                height={450}
                 className="object-center relative rounded-lg hover:scale-105 transition-transform duration-300"
               />
             </div>
@@ -91,7 +91,7 @@ export function AboutSection() {
             </p>
             
             <div className="mb-8">
-              <h4 className="font-semibold mb-3 text-foreground dark:text-foreground">My expertise includes:</h4>
+              <h4 className="font-semibold text-xl mb-3 text-foreground dark:text-foreground">My expertise includes:</h4>
               <ul className="space-y-2">
                 <li className="flex items-center text-muted-foreground dark:text-muted-foreground">
                   <span className="mr-2">→</span> 
