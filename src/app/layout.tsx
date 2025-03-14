@@ -19,18 +19,15 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://sabbir-tanvir.netlify.app/dp3.jpg", // Full absolute URL
+        // Make sure the image is in your public directory
+        url: "/dp3.jpg",
         width: 1200,
         height: 630,
         alt: "Sabbir Tanvir",
+        type: "image/jpeg", // Specify the image type
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Sabbir Tanvir — Software Engineer",
-    description: "Discover a skilled Software Engineer and UI/UX Designer, renowned for creating impactful software that achieves exceptional results.",
-    images: ["https://sabbir-tanvir.netlify.app/dp3.jpg"], // Full absolute URL
+    siteName: "Sabbir Tanvir Portfolio",
   },
 };
 
