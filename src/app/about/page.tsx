@@ -11,24 +11,25 @@ import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const techSkills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React.js",
-  "Next.js",
-  "Node.js",
-  "Express.js",
-  "MySQL",
-  "MongoDB",
-  "PostgreSQL",
-  "Docker",
-  "Jwt",
-  "AWS",
-  "Framer Motion",
-  "Figma",
-  "Tailwind CSS",
-  "GIT",
+  { name: "HTML", icon: "🌐" },
+  { name: "CSS", icon: "🎨" },
+  { name: "JavaScript", icon: "📜" },
+  { name: "TypeScript", icon: "📘" },
+  { name: "React.js", icon: "⚛️" },
+  { name: "Next.js", icon: "▲" },
+  { name: "Node.js", icon: "🟢" },
+  { name: "Express.js", icon: "🚂" },
+  { name: "MySQL", icon: "🐬" },
+  { name: "MongoDB", icon: "🍃" },
+  { name: "PostgreSQL", icon: "🐘" },
+  { name: "Docker", icon: "🐳" },
+  { name: "JWT", icon: "🔐" },
+  { name: "AWS", icon: "☁️" },
+  { name: "Framer Motion", icon: "🎬" },
+  { name: "Figma", icon: "🖌️" },
+  { name: "Tailwind CSS", icon: "💨" },
+  { name: "GIT", icon: "📂" },
+  { name: "Prisma", icon: "📂" }
 ];
 
 const workExperience = [
@@ -155,21 +156,70 @@ export default function AboutPage() {
         </section>
 
         {/* Skills Showcase */}
-        <section className="py-16 bg-gray-50 dark:bg-[#0B0B0D]">
+        <section className="py-3 bg-gray-50 dark:bg-[#0B0B0D] overflow-hidden">
           <div className="container-custom">
-            <div className="flex flex-wrap gap-2 justify-center">
-              {techSkills.map((skill, index) => (
-                <motion.div
-                  key={skill}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.05 * index }}
-                >
-                  <div className="px-4 py-2 bg-white shadow-md dark:bg-gray-900 dark:hover:bg-gray-700 rounded-full text-sm">
-                    {skill}
+            <div className="relative">
+              {/* Infinite Scrolling Animation - Right to Left */}
+              <motion.div
+                className="flex gap-4 flex-nowrap"
+                initial={{ x: 0 }}
+                animate={{ 
+                  x: [10, -1920] 
+                }}
+                transition={{
+                  x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 40,
+                    ease: "linear",
+                  },
+                }}
+              >
+                {/* Duplicated skills for seamless loop */}
+                {[...techSkills, ...techSkills, ...techSkills].map((skill, index) => (
+                  <div
+                    key={`skill-${index}`}
+                    className="px-5 py-3 bg-white shadow-md dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full text-sm flex items-center gap-2 flex-shrink-0 transition-all duration-300 hover:scale-110"
+                  >
+                    <span className="text-lg" aria-hidden="true">{skill.icon}</span>
+                    {skill.name}
                   </div>
-                </motion.div>
-              ))}
+                ))}
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-3 bg-gray-50 dark:bg-[#0B0B0D] overflow-hidden">
+          <div className="container-custom">
+            <div className="relative">
+              {/* Infinite Scrolling Animation - Left to Right (opposite direction) */}
+              <motion.div
+                className="flex gap-4 flex-nowrap"
+                initial={{ x: -1920 }}
+                animate={{ 
+                  x: [-1920, 0] 
+                }}
+                transition={{
+                  x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 40,
+                    ease: "linear",
+                  },
+                }}
+              >
+                {/* Duplicated skills for seamless loop */}
+                {[...techSkills, ...techSkills, ...techSkills].map((skill, index) => (
+                  <div
+                    key={`skill-reverse-${index}`}
+                    className="px-5 py-3 bg-white shadow-md dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full text-sm flex items-center gap-2 flex-shrink-0 transition-all duration-300 hover:scale-110"
+                  >
+                    <span className="text-lg" aria-hidden="true">{skill.icon}</span>
+                    {skill.name}
+                  </div>
+                ))}
+              </motion.div>
             </div>
           </div>
         </section>

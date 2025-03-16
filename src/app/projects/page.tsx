@@ -8,6 +8,7 @@ import { ContactCTA } from "@/components/contact-cta";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { title } from "process";
 
 const categories = ["All", "Development", "Design"];
 
@@ -17,7 +18,14 @@ const projects = [
     category: "Development & Design",
     year: "2024",
     image: "/p1.png",
-    href: "/projects/aora",
+    href: "/projects/sendme",
+  },
+  {
+    title: "Portfolio Website",
+    category:"Development & Design",
+    year: "2022",
+    image: "/p4.png",
+    href:"prooject/portfolio"
   },
   {
     title: "Online Banking App",
@@ -34,7 +42,7 @@ const projects = [
     href: "/projects/aora",
   },
   {
-    title: "Voice Recognition System",
+    title: "Sage AI Assistant",
     category: "Development & Design",
     year: "2024",
     image: "/p33.png",

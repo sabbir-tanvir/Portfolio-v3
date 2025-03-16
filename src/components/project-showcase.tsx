@@ -27,10 +27,10 @@ const projects = [
   },
   {
     id: 3,
-    title: "Sage Ai",
+    title: "Portfolio Website",
     category: "Development & Design",
-    year: "2024",
-    image: "/p3.png",
+    year: "2022",
+    image: "/p4.png",
     href: "/projects/code-screenshot",
   },
   {
