@@ -179,7 +179,7 @@ export default function AboutPage() {
                 {[...techSkills, ...techSkills, ...techSkills].map((skill, index) => (
                   <div
                     key={`skill-${index}`}
-                    className="px-5 py-3 bg-white shadow-md dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full text-sm flex items-center gap-2 flex-shrink-0 transition-all duration-300 hover:scale-110"
+                    className="px-5 py-3 bg-white shadow-md dark:shadow-gray-700 dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full text-sm flex items-center gap-2 flex-shrink-0 transition-all duration-300 hover:scale-110"
                   >
                     <span className="text-lg" aria-hidden="true">{skill.icon}</span>
                     {skill.name}
@@ -213,7 +213,7 @@ export default function AboutPage() {
                 {[...techSkills, ...techSkills, ...techSkills].map((skill, index) => (
                   <div
                     key={`skill-reverse-${index}`}
-                    className="px-5 py-3 bg-white shadow-md dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full text-sm flex items-center gap-2 flex-shrink-0 transition-all duration-300 hover:scale-110"
+                    className="px-5 py-3 bg-white shadow-md dark:shadow-gray-700 dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full text-sm flex items-center gap-2 flex-shrink-0 transition-all duration-300 hover:scale-110"
                   >
                     <span className="text-lg" aria-hidden="true">{skill.icon}</span>
                     {skill.name}

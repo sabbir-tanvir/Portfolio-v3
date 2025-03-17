@@ -63,7 +63,7 @@ export function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex   items-center justify-center "
+            className="flex items-center justify-center "
           >
             <div className="rounded-lg ">
               <Image
@@ -71,7 +71,7 @@ export function AboutSection() {
                 alt="Profile Picture"
                 width={450}
                 height={450}
-                className="object-center relative rounded-lg hover:scale-105 transition-transform duration-300"
+                className="object-center shadow-md relative rounded-lg hover:scale-105 transition-transform duration-300"
               />
             </div>
           </motion.div>

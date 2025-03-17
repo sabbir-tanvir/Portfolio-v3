@@ -76,7 +76,7 @@ export default function Footer() {
           </p>
           </div>
 
-          <div className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer">
+          <div className="absolute left-1/2  transform -translate-x-1/2 cursor-pointer">
           {quickLinks.map((link) => (
                 <div key={link.name}>
                   <button 
@@ -90,7 +90,7 @@ export default function Footer() {
               ))}
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex gap-4 hidden md:flex">
               {socialLinks.map((link) => (
                 <a
                   key={link.label}

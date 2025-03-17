@@ -180,7 +180,7 @@ export default function ContactPage() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="dark:bg-[#17171b7a] bg-white p-6 h-[85%] mt-3  rounded-2xl"
               >
-                <div className="flex items-center mb-4">
+                <div className="flex items-center justify-center mb-4">
                   <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
                   <span className="text-sm">Available for work</span>
                 </div>
@@ -190,7 +190,7 @@ export default function ContactPage() {
                     src="/dp.jpg"
                     alt="Sabbir Tanvir"
                     fill
-                    className="object-cover"
+                    className="object-cover "
                   />
                 </div>
 
