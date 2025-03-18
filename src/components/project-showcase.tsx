@@ -16,7 +16,7 @@ const projects = [
     category: "Development & Design",
     year: "2024",
     image: "/p1.png",
-    href: "/projects/aora",
+    href: "/project",
     githubUrl: "https://github.com/sabbir-tanvir/Send-Me-",
     liveUrl: "https://sendmee.netlify.app/"
   },
