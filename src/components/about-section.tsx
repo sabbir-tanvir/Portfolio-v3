@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
+import { GlowingEffect } from "./ui/glowing-effect";
 
 export function AboutSection() {
   const { theme } = useTheme();
@@ -65,36 +66,22 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="flex items-center justify-center "
           >
-            <div className="rounded-xl relative group">
-              <div 
-                className="absolute -inset-1 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0 glow-border blur-[1px]"
-              />
-              <div className="relative z-10 bg-white dark:bg-[#0B0B0D] rounded-lg overflow-hidden">
+            <div className="rounded-xl p-1 relative group">
+            
                 <Image
                   src="/dp.jpg"
                   alt="Profile Picture"
                   width={450}
                   height={450}
-                  className="rounded-lg hover:scale-105 transition-transform duration-300 object-center shadow-sm"
+                  className="rounded-lg  object-center "
                 />
-              </div>
-              <style jsx global>{`
-                .glow-border {
-                  background: linear-gradient(90deg, #22c55e, #3b82f6, #8b5cf6, #22c55e);
-                  background-size: 300% 100%;
-                  box-shadow: 0 0 10px rgba(34, 197, 94, 0.8), 0 0 20px rgba(59, 130, 246, 0.6);
-                  filter: brightness(1);
-                }
-                
-                .group:hover .glow-border {
-                  animation: border-glow 3s linear infinite;
-                }
-                
-                @keyframes border-glow {
-                  0% { background-position: 0% 0%; }
-                  100% { background-position: 300% 0%; }
-                }
-              `}</style>
+                <GlowingEffect
+                    spread={80}
+                    glow={true}
+                    disabled={false}
+                    proximity={100}
+                    inactiveZone={1.01}
+                  />
             </div>
           </motion.div>
 

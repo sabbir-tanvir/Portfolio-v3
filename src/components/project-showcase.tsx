@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { GlowingEffect } from "./ui/glowing-effect";
 
 const categories = ["All", "Development", "Design"];
 
@@ -129,6 +130,7 @@ export function ProjectShowcase() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2  gap-6">
+          
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -137,14 +139,23 @@ export function ProjectShowcase() {
               transition={{ duration: 0.5, delay: 0.1 * index }}
               viewport={{ once: true }}
             >
+
               <div className="block group relative">
+              
                 <div className="overflow-hidden rounded-2xl  border-b dark:bg-[#0B0B0D] p-4">
- 
-                  <div className="p-10 bg-pink-100  dark:bg-gray-800  dark:shadow-gray-700  shadow-md rounded-t-3xl">
-                  <div 
+                
+                  <div className="p-10 bg-pink-100  dark:bg-gray-800  dark:shadow-gray-700  shadow-md rounded-b-2xl rounded-t-3xl">
+                  <GlowingEffect
+                    spread={80}
+                    glow={true}
+                    disabled={false}
+                    proximity={100}
+                    inactiveZone={1.01}
+                  /><div 
                     className=" cursor-pointer" 
                     onClick={() => window.location.href = project.href}
                   >
+                    
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -152,6 +163,7 @@ export function ProjectShowcase() {
                       height={400}
                       className="w-full rounded-lg h-auto object-cover border shadow-lg transition-transform duration-500 group-hover:scale-105"
                     />
+                    
                   </div>
                   </div>
                   <div className="pt-4 pb-2">

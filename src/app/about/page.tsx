@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const techSkills = [
   { name: "HTML", icon: "🌐" },
@@ -110,7 +111,7 @@ export default function AboutPage() {
         <section className="pt-10 pb-16 md:pt-32 md:pb-24 bg-gray-50 dark:bg-[#0B0B0D]">
           <div className="container-custom">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
+           
 
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -118,13 +119,25 @@ export default function AboutPage() {
                 transition={{ duration: 0.5 }}
                 className="order-2 md:order-1"
               >
-                <div className="relative hover:scale-105 transition-transform duration-300 shadow-2xl w-full max-w-[500px] mx-auto aspect-square overflow-hidden rounded-t-md md:rounded-lg">
-                  <Image
-                    src="/dp3.jpg"
-                    alt="Sabbir Tanvir"
-                    fill
-                    className="object-cover rounded-md "
+                
+                <div className="relative w-full rounded-lg p-1 max-w-[500px] mx-auto">
+                <GlowingEffect
+                    spread={80}
+                    glow={true}
+                    disabled={false}
+                    proximity={200}
+                    inactiveZone={0.04}
                   />
+                  <div className="aspect-square   rounded-t-md md:rounded-lg  relative">
+                  
+                    <Image
+                      src="/dp3.jpg"
+                      alt="Sabbir Tanvir"
+                      fill
+                      className="object-cover rounded-md z-10 relative"
+                    />
+                    
+                  </div>
                 </div>
               </motion.div>
 
@@ -163,8 +176,8 @@ export default function AboutPage() {
               <motion.div
                 className="flex gap-4 flex-nowrap"
                 initial={{ x: 0 }}
-                animate={{ 
-                  x: [10, -1920] 
+                animate={{
+                  x: [10, -1920]
                 }}
                 transition={{
                   x: {
@@ -197,8 +210,8 @@ export default function AboutPage() {
               <motion.div
                 className="flex gap-4 flex-nowrap"
                 initial={{ x: -1920 }}
-                animate={{ 
-                  x: [-1920, 0] 
+                animate={{
+                  x: [-1920, 0]
                 }}
                 transition={{
                   x: {
@@ -314,12 +327,14 @@ export default function AboutPage() {
           <div className="container-custom">
             <div className="mb-16">
               <div className="flex items-center gap-2 mb-6">
+                
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
+
                   <div className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
                     <span className="text-xs font-bold">✓</span>
                   </div>
@@ -352,22 +367,29 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="text-muted-foreground text-lg"
               >
+                
                 I have worked with some of the most innovative industry leaders to help build their top-notch products.
               </motion.p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              
               {designSteps.slice(0, 4).map((step, index) => (
+                
                 <motion.div
                   key={step.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                   viewport={{ once: true }}
-                  className="p-6 bg-white dark:bg-[#151515] shadow-md rounded-lg"
+                  className="p-6 bg-white dark:bg-[#151515] rounded-lg"
                 >
+                  
+
                   <div className="w-12 h-12 rounded-full bg-[#222222] flex items-center justify-center mb-4">
+
                     <span className="text-xl">{index === 0 ? "📊" : index === 1 ? "🖌️" : index === 2 ? "🎨" : "💻"}</span>
+
                   </div>
                   <h3 className="text-xl font-medium mb-2">0{step.id}. {step.title}</h3>
                   <p className="text-muted-foreground">{step.description}</p>
@@ -382,6 +404,7 @@ export default function AboutPage() {
           <div className="container-custom">
             <div className="mb-16">
               <div className="flex items-center gap-2 mb-6">
+
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -415,6 +438,7 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-4">
+              
               {awards.map((award, index) => (
                 <motion.div
                   key={index}
@@ -498,7 +522,7 @@ export default function AboutPage() {
                     transition={{ duration: 0.5, delay: 0.5 }}
                     viewport={{ once: true }}
                   >
-                    <div className="text-3xl font-bold mb-1">25+</div>
+                    <div className="text-3xl font-bold mb-1">25+</</div>
                     <div className="text-sm text-muted-foreground">Events conducted</div>
                   </motion.div>
                   <motion.div

@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
+
 const testimonials = [
   {
     id: 1,
@@ -148,5 +149,6 @@ export function TestimonialsSection() {
         </motion.div>
       </div>
     </section>
+    
   );
 }
