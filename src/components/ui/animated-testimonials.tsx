@@ -78,7 +78,7 @@ export const AnimatedTestimonials = ({
             What others say
           </motion.h2>
         </div>
-        <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
+        <div className="relative pt-5 grid grid-cols-1 gap-20 md:grid-cols-2">
         <div>
           <div className="relative h-80 w-full">
             <AnimatePresence>

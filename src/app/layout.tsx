@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         // Make sure the image is in your public directory
-        url: "/dp3.jpg",
+        url: "/cover.png",
         width: 1200,
         height: 630,
         alt: "Sabbir Tanvir",
