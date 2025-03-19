@@ -1,31 +1,31 @@
 export interface ProjectFeature {
-  title: string;
-  description: string;
-  icon: string;
+    title: string;
+    description: string;
+    icon: string;
 }
 
 export interface Project {
-  id: number;
-  slug: string;
-  title: string;
-  subtitle: string;
-  category: string;
-  year: string;
-  image: string;
-  previewImages: string[];
-  role: string;
-  client: string;
-  description: string;
-  overview: string;
-  techStack: string[];
-  features: ProjectFeature[];
-  implementation: {
-    frontend?: string[];
-    backend?: string[];
-    deployment?: string[];
-  };
-  githubUrl: string;
-  liveUrl: string;
+    id: number;
+    slug: string;
+    title: string;
+    subtitle: string;
+    category: string;
+    year: string;
+    image: string;
+    previewImages: string[];
+    role: string;
+    client: string;
+    description: string;
+    overview: string;
+    techStack: string[];
+    features: ProjectFeature[];
+    implementation: {
+        frontend?: string[];
+        backend?: string[];
+        deployment?: string[];
+    };
+    githubUrl: string;
+    liveUrl: string;
 }
 
 export const projects: Project[] = [
@@ -37,7 +37,7 @@ export const projects: Project[] = [
         category: "Web Development",
         year: "2023",
         image: "/grocery/home.jpeg",
-        previewImages: ["/grocery/login.jpg", "/grocery/home.jpeg", "/grocery/card.jpeg",  "/grocery/feedback.jpeg", "/grocery/order.jpeg", "/grocery/admin.jpg"],
+        previewImages: ["/grocery/login.jpg", "/grocery/home.jpeg", "/grocery/card.jpeg", "/grocery/feedback.jpeg", "/grocery/order.jpeg", "/grocery/admin.jpg"],
         role: "Full-Stack Developer",
         client: "Personal Project",
         description: "A comprehensive online grocery shopping platform that allows users to browse products, search by name, add items to cart, and complete purchases. The website includes user authentication, feedback system, and an admin panel for inventory management.",
@@ -75,7 +75,7 @@ export const projects: Project[] = [
             backend: [
                 "PHP for server-side processing",
                 "MySQL for database management",
-               
+
                 "Session management for user authentication"
             ],
             deployment: [
@@ -88,7 +88,7 @@ export const projects: Project[] = [
         githubUrl: "https://github.com/sabbir-tanvir/Grocery-Shopping-Website",
         liveUrl: "https://grocery-shop-dsabbirtanvir.infinityfreeapp.com/"
     },
-   
+
     {
         id: 2,
         slug: "online-banking",
@@ -156,12 +156,12 @@ export const projects: Project[] = [
         category: "Development & Design",
         year: "2022",
         image: "/p4.png",
-        previewImages: ["/p4.png", "/p4.png"],
+        previewImages: ["/p4.png","/portfolio/1.png","/portfolio/3.png", "/portfolio/2.png", ],
         role: "Frontend Developer",
         client: "Personal Project",
         description: "A modern portfolio website showcasing projects and professional experience. Features a clean design with smooth animations and responsive layout.",
-        overview: "Built with Next.js and React, this portfolio site offers fast performance and seamless page transitions. The responsive design ensures optimal viewing on all devices, while Framer Motion provides engaging animations.",
-        techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+        overview: "Built with HTML, CSS and JS, this portfolio site offers fast performance and seamless page transitions. The responsive design ensures optimal viewing on all devices, while Framer Motion provides engaging animations.",
+        techStack: ["HTML","CSS","JS", "Vercel"],
         features: [
             {
                 title: "Responsive Design",
@@ -175,26 +175,26 @@ export const projects: Project[] = [
             },
             {
                 title: "Dark Mode",
-                description: "Toggle between light and dark themes for comfortable viewing in any environment.",
+                description: "dark themes for comfortable viewing in any environment.",
                 icon: "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
             },
             {
-                title: "Project Showcase",
-                description: "Interactive display of projects with detailed information and links.",
+                title: "Contact Form",
+                description: "Interactive contact form for easy communication with visitors.",
                 icon: "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
             }
         ],
         implementation: {
             frontend: [
-                "Next.js for server-side rendering",
-                "React for component structure",
-                "Tailwind CSS for styling",
-                "Framer Motion for animations"
+                "HTML for semantic structure",
+                "CSS for styling and layout",
+                "JavaScript for interactivity",
+                "CSS for animations"
             ],
             deployment: [
                 "Vercel for hosting and deployment",
                 "GitHub for version control",
-                "Cloudinary for image optimization"
+                
             ]
         },
         githubUrl: "https://github.com/sabbir-tanvir/Portfolio",
@@ -208,12 +208,12 @@ export const projects: Project[] = [
         category: "Development & Design",
         year: "2024",
         image: "/p33.png",
-        previewImages: ["/p33.png", "/p33.png"],
+        previewImages: ["/sage/1.png", "/sage/2.png", "/sage/3.png", "/p33.png"],
         role: "AI Developer",
         client: "Personal Project",
         description: "An AI assistant application that helps users with various tasks from answering questions to generating content and providing recommendations.",
         overview: "Powered by advanced natural language processing models, Sage AI delivers intelligent responses to user queries. The application features a conversational interface and can handle multiple types of requests including text generation, data analysis, and information retrieval.",
-        techStack: ["React", "Node.js", "OpenAI API", "MongoDB", "Express", "WebSockets", "Tailwind CSS"],
+        techStack: ["React", "Gemni API","Axiox", "Convex", "dedent", "uuid", "Tailwind CSS"],
         features: [
             {
                 title: "Natural Language Understanding",
@@ -231,8 +231,8 @@ export const projects: Project[] = [
                 icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
             },
             {
-                title: "Multi-modal Input",
-                description: "Process both text and image inputs to provide comprehensive assistance.",
+                title: "Prompt to React Application",
+                description: "Convert user prompts into actionable tasks and provide detailed responses.",
                 icon: "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
             }
         ],
@@ -240,19 +240,21 @@ export const projects: Project[] = [
             frontend: [
                 "React for interactive UI",
                 "Tailwind CSS for styling",
-                "SWR for data fetching",
-                "React Speech Recognition"
+                "axios data fetching",
+                "Gemni API for AI responses",
+                "dedent for text formatting",
+                
             ],
             backend: [
-                "Node.js for server runtime",
-                "Express for API framework",
-                "MongoDB for storing conversations",
-                "OpenAI API integration"
+                
+                "Gemni API integration",
+                "Convex for DataBases",
+                "uuid for unique identifiers",  
+
             ],
             deployment: [
                 "Vercel for frontend deployment",
-                "Heroku for backend services",
-                "MongoDB Atlas for database",
+                "convex for backend deployment",
                 "CI/CD with GitHub Actions"
             ]
         },
@@ -323,10 +325,10 @@ export const projects: Project[] = [
 
 // Helper function to get project by slug
 export function getProjectBySlug(slug: string): Project | undefined {
-  return projects.find(project => project.slug === slug);
+    return projects.find(project => project.slug === slug);
 }
 
 // Helper function to get all project slugs
 export function getAllProjectSlugs(): string[] {
-  return projects.map(project => project.slug);
+    return projects.map(project => project.slug);
 }

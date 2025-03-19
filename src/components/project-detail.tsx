@@ -54,13 +54,13 @@ export function ProjectDetail({ project, currentProject, projects }: ProjectDeta
       </div>
 
       {/* Hero section */}
-      <div className="w-full relative rounded-lg overflow-hidden mb-12 bg-gradient-to-r from-indigo-900/40 to-purple-900/40 border border-border">
+      <div className="w-full relative rounded-lg overflow-hidden mb-12 bg-gradient-to-r from-pink-600/40 to-purple-900/10 dark:bg-gradient-to-r dark:from-gray-600/10 dark:to-purple-900/10 border border-border">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: `url('${project.previewImages[0]}')` }}
         ></div>
         <div className="p-12 md:p-16 relative z-10 flex flex-col items-center justify-center min-h-[300px]">
-          <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full mb-4">
+          <span className="px-3 py-1 bg-primary/10 backdrop-blur-md text-primary text-xs rounded-full mb-4">
             Web Application
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">{project.title}</h1>
