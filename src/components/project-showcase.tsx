@@ -6,60 +6,18 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { GlowingEffect } from "./ui/glowing-effect";
+import { projects } from "@/data/projects"; // Import from our new data file
 
 const categories = ["All", "Development", "Design"];
-
-const projects = [
-  {
-    id: 1,
-    title: "Annonymous Chat App",
-    category: "Development & Design",
-    year: "2024",
-    image: "/p1.png",
-    href: "/project",
-    githubUrl: "https://github.com/sabbir-tanvir/Send-Me-",
-    liveUrl: "https://sendmee.netlify.app/"
-  },
-  {
-    id: 2,
-    title: "Online Banking App",
-    category: "Development & Design",
-    year: "2024",
-    image: "/p2.png",
-    href: "/projects/code-screenshot",
-    githubUrl: "https://github.com/sabbir-tanvir/Payit",
-    liveUrl: "https://github.com/sabbir-tanvir/Payit"
-  },
-  {
-    id: 3,
-    title: "Portfolio Website",
-    category: "Development & Design",
-    year: "2022",
-    image: "/p4.png",
-    href: "/projects/code-screenshot",
-    githubUrl: "https://github.com/sabbir-tanvir/Portfolio",
-    liveUrl: "https://portfolio-sabbir.vercel.app/"
-  },
-  {
-    id: 4,
-    title: "Sage Ai",
-    category: "Development & Design",
-    year: "2024",
-    image: "/p33.png",
-    href: "/projects/code-screenshot",
-    githubUrl: "https://github.com/sabbir-tanvir/Sage-Ai",
-    liveUrl: "https://sageai-xi.vercel.app/"
-  },
-];
 
 export function ProjectShowcase() {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredProjects = activeCategory === "All"
+  const filteredProjects = (activeCategory === "All"
     ? projects
     : projects.filter(project =>
         project.category.includes(activeCategory)
-      );
+      )).slice(0, 4); // Limit to only 4 projects
 
   // Handler for external links
   const handleExternalLinkClick = (e: React.MouseEvent<HTMLButtonElement>, url: string) => {
@@ -151,9 +109,10 @@ export function ProjectShowcase() {
                     disabled={false}
                     proximity={100}
                     inactiveZone={1.01}
-                  /><div 
-                    className=" cursor-pointer" 
-                    onClick={() => window.location.href = project.href}
+                  />
+                  <div 
+                    className="cursor-pointer" 
+                    onClick={() => window.location.href = `/projects/${project.slug}`} // Updated to dynamic route
                   >
                     
                     <Image
@@ -170,7 +129,7 @@ export function ProjectShowcase() {
                     <div className="flex justify-between items-center">
                       <h3 
                         className="text-xl font-medium cursor-pointer" 
-                        onClick={() => window.location.href = project.href}
+                        onClick={() => window.location.href = `/projects/${project.slug}`} // Updated to dynamic route
                       >
                         {project.title}
                       </h3>
