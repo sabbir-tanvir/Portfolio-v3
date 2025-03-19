@@ -152,7 +152,7 @@ export default function AboutPage() {
                   A <span className="text-[#90c797]">creative developer</span> & digital designer
                 </h1>
                 <p className="text-muted-foreground text-lg mb-8">
-                  I collaborate with brands globally to design impactful, mission-focused websites
+                  I collaborate with brands globally to design && develop impactful, mission-focused websites
                   that drive results and achieve business goals.
                 </p>
                 <Link href="/resume" target="_blank">
