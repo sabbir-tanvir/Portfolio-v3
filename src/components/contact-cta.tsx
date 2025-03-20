@@ -37,7 +37,7 @@ export function ContactCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white "
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-200 dark:text-white "
             >
               Ready to Start Your
               <br />

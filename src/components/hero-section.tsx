@@ -18,7 +18,26 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <p className="text-muted-foreground text-lg">Hey! It&apos;s me Sabbir,</p>
+              <p className="text-muted-foreground text-lg">
+                <span className="wave-emoji inline-block mr-2">👋</span> 
+                Hey! It's me Sabbir,
+              </p>
+              <style jsx>{`
+                @keyframes wave {
+                  0% { transform: rotate(0deg); }
+                  10% { transform: rotate(14deg); }
+                  20% { transform: rotate(-8deg); }
+                  30% { transform: rotate(14deg); }
+                  40% { transform: rotate(-4deg); }
+                  50% { transform: rotate(10deg); }
+                  60% { transform: rotate(0deg); }
+                  100% { transform: rotate(0deg); }
+                }
+                .wave-emoji {
+                  animation: wave 2.5s infinite;
+                  transform-origin: 70% 70%;
+                }
+              `}</style>
             </motion.div>
 
             <motion.div
