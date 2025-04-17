@@ -101,7 +101,7 @@ export default function ProjectsPage() {
                     transition={{ duration: 0.5, delay: 0.1 * index }}
                   >
                     <div className="block group relative">
-                      <div className="overflow-hidden rounded-2xl border-b dark:bg-[#0B0B0D] p-4">
+                      <div className="overflow-hidden rounded-2xl min-h-[315px] border-b dark:bg-[#0B0B0D] p-4">
                           <GlowingEffect
                             spread={80}
                             glow={true}
@@ -122,7 +122,7 @@ export default function ProjectsPage() {
                             />
                           </div>
                         
-                        <div className="pt-4 pb-2">
+                        <div className="pt-4 pb-1">
                           <div className="flex justify-between items-center">
                             <h3 
                               className="text-xl font-medium cursor-pointer" 

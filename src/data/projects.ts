@@ -75,7 +75,6 @@ export const projects: Project[] = [
             backend: [
                 "PHP for server-side processing",
                 "MySQL for database management",
-
                 "Session management for user authentication"
             ],
             deployment: [
@@ -88,7 +87,6 @@ export const projects: Project[] = [
         githubUrl: "https://github.com/sabbir-tanvir/Grocery-Shopping-Website",
         liveUrl: "https://grocery-shop-dsabbirtanvir.infinityfreeapp.com/"
     },
-
     {
         id: 2,
         slug: "online-banking",
@@ -156,12 +154,12 @@ export const projects: Project[] = [
         category: "Development & Design",
         year: "2022",
         image: "/p4.png",
-        previewImages: ["/p4.png","/portfolio/1.png","/portfolio/3.png", "/portfolio/2.png", ],
+        previewImages: ["/p4.png", "/portfolio/1.png", "/portfolio/3.png", "/portfolio/2.png",],
         role: "Frontend Developer",
         client: "Personal Project",
         description: "A modern portfolio website showcasing projects and professional experience. Features a clean design with smooth animations and responsive layout.",
         overview: "Built with HTML, CSS and JS, this portfolio site offers fast performance and seamless page transitions. The responsive design ensures optimal viewing on all devices, while Framer Motion provides engaging animations.",
-        techStack: ["HTML","CSS","JS", "Vercel"],
+        techStack: ["HTML", "CSS", "JS", "Vercel"],
         features: [
             {
                 title: "Responsive Design",
@@ -194,7 +192,7 @@ export const projects: Project[] = [
             deployment: [
                 "Vercel for hosting and deployment",
                 "GitHub for version control",
-                
+
             ]
         },
         githubUrl: "https://github.com/sabbir-tanvir/Portfolio",
@@ -213,7 +211,7 @@ export const projects: Project[] = [
         client: "Personal Project",
         description: "An AI assistant application that helps users with various tasks from answering questions to generating content and providing recommendations.",
         overview: "Powered by advanced natural language processing models, Sage AI delivers intelligent responses to user queries. The application features a conversational interface and can handle multiple types of requests including text generation, data analysis, and information retrieval.",
-        techStack: ["React", "Gemni API","Axiox", "Convex", "dedent", "uuid", "Tailwind CSS"],
+        techStack: ["React", "Gemni API", "Axiox", "Convex", "dedent", "uuid", "Tailwind CSS"],
         features: [
             {
                 title: "Natural Language Understanding",
@@ -243,13 +241,13 @@ export const projects: Project[] = [
                 "axios data fetching",
                 "Gemni API for AI responses",
                 "dedent for text formatting",
-                
+
             ],
             backend: [
-                
+
                 "Gemni API integration",
                 "Convex for DataBases",
-                "uuid for unique identifiers",  
+                "uuid for unique identifiers",
 
             ],
             deployment: [
@@ -320,7 +318,76 @@ export const projects: Project[] = [
         githubUrl: "https://github.com/sabbir-tanvir/Send-Me-",
         liveUrl: "https://sendmee.netlify.app/"
     },
-
+    {
+        id: 6,
+        slug: "mock-interview-ai",
+        title: "Mock Interview AI",
+        subtitle: "AI-Powered Interview Practice",
+        category: "AI & Web Development",
+        year: "2024",
+        image: "/mock/m.png",
+        previewImages: [
+            "/mock/m.png",
+            "/mock/m1.png",
+            "/mock/m3.png",
+            "/mock/m4.png"
+        ],
+        role: "Full-Stack & AI Developer",
+        client: "Personal Project",
+        description: "A web application that simulates real interview scenarios using Vapi AI agent and Gemini API. Users can practice technical and behavioral interviews with instant feedback and realistic AI-driven conversations.",
+        overview: "Mock Interview AI leverages the Vapi AI agent for dynamic voice-based interview simulations and integrates Gemini API for advanced question generation and feedback. The platform provides a realistic interview environment, tracks user performance, and helps users improve their interview skills through personalized feedback.",
+        techStack: [
+            "Next.js",
+            "Firebase",
+            "Tailwind CSS",
+            "Vapi AI",
+            "shadcn/ui",
+            "Google Gemeni",
+            "Zod"
+        ],
+        features: [
+            {
+                title: "AI-Powered Interviewer",
+                description: "Simulates real interviewers using Vapi AI agent for voice-based and text-based interviews.",
+                icon: "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+            },
+            {
+                title: "Dynamic Question Generation",
+                description: "Gemini API generates technical and behavioral questions tailored to the user's profile and job role.",
+                icon: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            },
+            {
+                title: "Instant Feedback",
+                description: "Provides real-time feedback and suggestions to help users improve their answers and interview skills.",
+                icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+            },
+            {
+                title: "Performance Tracking",
+                description: "Tracks user progress and provides analytics on strengths and areas for improvement.",
+                icon: "M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            }
+        ],
+        implementation: {
+            frontend: [
+                "Next.js and TypeScript for modern web development",
+                "Tailwind CSS and shadcn/ui for responsive, accessible design",
+                "Zod for schema validation",
+                "Firebase for authentication and data storage"
+            ],
+            backend: [
+                "Integration with Vapi AI agent for real-time interview simulation",
+                "Google Gemini API for question generation and feedback",
+                "Custom endpoints for session and analytics management"
+            ],
+            deployment: [
+                "Vercel for seamless deployment and hosting",
+                "Environment variables for secure API key management",
+                "GitHub for version control and CI/CD"
+            ]
+        },
+        githubUrl: "https://github.com/sabbir-tanvir/Mock-interview",
+        liveUrl: "https://mock-interview-three-alpha.vercel.app/"
+    }
 ];
 
 // Helper function to get project by slug
