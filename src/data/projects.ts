@@ -27,7 +27,7 @@ export interface Project {
     githubUrl: string;
     liveUrl: string;
     demoUrl?: string;
-
+    backgroundVideo?: string; // New property for project-specific background video
 }
 
 export const projects: Project[] = [
@@ -88,7 +88,7 @@ export const projects: Project[] = [
         },
         githubUrl: "https://github.com/sabbir-tanvir/Grocery-Shopping-Website",
         liveUrl: "https://grocery-shop-dsabbirtanvir.infinityfreeapp.com/",
-
+        backgroundVideo: "/grocery/test.mp4"
     },
     {
         id: 2,
@@ -147,7 +147,8 @@ export const projects: Project[] = [
             ]
         },
         githubUrl: "https://github.com/sabbir-tanvir/Payit",
-        liveUrl: "https://github.com/sabbir-tanvir/Payit"
+        liveUrl: "https://github.com/sabbir-tanvir/Payit",
+        backgroundVideo: "/grocery/test.mp4" // You can replace with a different video
     },
     {
         id: 3,
@@ -218,7 +219,8 @@ export const projects: Project[] = [
         },
         githubUrl: "https://github.com/sabbir-tanvir/Mock-interview",
         liveUrl: "https://mock-interview-three-alpha.vercel.app/",
-        demoUrl: "/grocery/test.mp4"
+        demoUrl: "/grocery/test.mp4",
+        backgroundVideo: "/grocery/test.mp4" // You can replace with a different video
     },
 
     {
@@ -280,7 +282,8 @@ export const projects: Project[] = [
             ]
         },
         githubUrl: "https://github.com/sabbir-tanvir/Sage-Ai",
-        liveUrl: "https://sageai-xi.vercel.app/"
+        liveUrl: "https://sageai-xi.vercel.app/",
+        backgroundVideo: "/grocery/test.mp4" // You can replace with a different video
     },
     {
         id: 5,
@@ -332,7 +335,9 @@ export const projects: Project[] = [
             ]
         },
         githubUrl: "https://github.com/sabbir-tanvir/Portfolio",
-        liveUrl: "https://portfolio-sabbir.vercel.app/"
+        liveUrl: "https://portfolio-sabbir.vercel.app/",
+        demoUrl: "/portfolio/portfolio.mp4",
+        backgroundVideo: "/portfolio/portfolio.mp4" // You can replace with a different video
     },
     {
         id: 6,
@@ -391,7 +396,8 @@ export const projects: Project[] = [
             ]
         },
         githubUrl: "https://github.com/sabbir-tanvir/Send-Me-",
-        liveUrl: "https://sendmee.netlify.app/"
+        liveUrl: "https://sendmee.netlify.app/",
+        backgroundVideo: "/grocery/test.mp4" // You can replace with a different video
     }
 
 ];

@@ -8,6 +8,7 @@ import { ProjectNavigation } from "@/components/project-navigation";
 import { Project, ProjectFeature } from "@/data/projects"; // Import types from data source
 import { useEffect, useRef, useState } from "react";
 import { ImageLightbox } from "@/components/ui/image-lightbox";
+import { EnhancedGallery } from "@/components/ui/enhanced-gallery";
 
 // Badge component for tech stack
 const Badge = ({ children }: { children: React.ReactNode }) => {
@@ -152,16 +153,17 @@ export function ProjectDetail({ project, currentProject, projects }: ProjectDeta
       <div className="w-full relative rounded-lg overflow-hidden mb-12 bg-gradient-to-r from-gray-600/90 to-purple-900/90 dark:bg-gradient-to-r dark:from-gray-600/90 dark:to-purple-900/90 border border-border">
         {/* Background video */}
         <div className="absolute inset-0 w-full h-full z-0">
-          {/* Video element - always displayed */}
+          {/* Video element - displays project-specific background video */}
           <video
             ref={bgVideoRef}
             autoPlay
             loop
             muted
             playsInline
+            onLoadedData={handleBgVideoLoaded}
             className="object-cover w-full h-full opacity-30"
           >
-            <source src="/grocery/test.mp4" type="video/mp4" />
+            <source src={project.backgroundVideo || "/grocery/test.mp4"} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           
@@ -276,26 +278,11 @@ export function ProjectDetail({ project, currentProject, projects }: ProjectDeta
           Application Preview
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          {project.previewImages.map((image: string, index: number) => (
-            <div
-              key={index}
-              className="relative rounded-xl overflow-hidden border border-border group transition-all duration-300 hover:shadow-xl cursor-pointer"
-              onClick={() => openLightbox(index)}
-            >
-              <Image
-                src={image}
-                alt={`${project.title} Preview ${index + 1}`}
-                width={600}
-                height={400}
-                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <p className="text-white p-6 text-lg font-medium">Click to enlarge</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Enhanced Gallery Component */}
+        <EnhancedGallery 
+          images={project.previewImages}
+          title={project.title}
+        />
 
         {/* Project videos */}
         {project.demoUrl && (
