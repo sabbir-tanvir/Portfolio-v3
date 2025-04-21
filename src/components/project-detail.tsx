@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { ProjectNavigation } from "@/components/project-navigation";
 import { Project, ProjectFeature } from "@/data/projects"; // Import types from data source
 
+
 // Badge component for tech stack
 const Badge = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -125,6 +126,7 @@ export function ProjectDetail({ project, currentProject, projects }: ProjectDeta
           <p className="text-foreground/70 mb-8 text-lg leading-relaxed">
             {project.overview}
           </p>
+
         </div>
 
         <div className="col-span-1">
@@ -184,6 +186,54 @@ export function ProjectDetail({ project, currentProject, projects }: ProjectDeta
             </div>
           ))}
         </div>
+
+        {/* Project videos */}
+        {/* <div className="mt-16">
+          <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
+            <span className="h-5 w-1 bg-primary rounded-full"></span>
+            Project Demo
+          </h2>
+          
+          <div className="rounded-xl overflow-hidden border border-border">
+            <Video 
+              src="/videos/test.mp4"
+              className="w-full"
+              poster="https://image.mux.com/nSkDBG3RtZM01JOdQQPlEw6OvlkC3ApPYR00E023ZmhomQ/thumbnail.webp"
+              controls
+            />
+            <div className="p-4 bg-card/50 backdrop-blur-sm">
+              <h3 className="text-lg font-medium">Project Demonstration</h3>
+              <p className="text-sm text-muted-foreground mt-1">
+                Watch a walkthrough of the {project.title} project showing the key features in action.
+              </p>
+            </div>
+          </div>
+        </div> */}
+
+
+          <div>
+            <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
+              <span className="h-5 w-1 bg-primary rounded-full"></span>
+              Project Demo
+            </h2>
+            <div className="rounded-xl overflow-hidden border border-border">
+              <video controls className="w-full" >
+                <source src={project.demoUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="p-4 bg-card/50 backdrop-blur-sm">
+                <h3 className="text-lg font-medium">Project Demonstration</h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Watch a walkthrough of the {project.title} project showing the key features in action.
+                </p>
+              </div>
+            </div>
+          </div>
+
+ 
+
+
+
       </section>
 
       {/* How it's built section */}

@@ -26,6 +26,8 @@ export interface Project {
     };
     githubUrl: string;
     liveUrl: string;
+    demoUrl?: string;
+    
 }
 
 export const projects: Project[] = [
@@ -85,7 +87,9 @@ export const projects: Project[] = [
             ]
         },
         githubUrl: "https://github.com/sabbir-tanvir/Grocery-Shopping-Website",
-        liveUrl: "https://grocery-shop-dsabbirtanvir.infinityfreeapp.com/"
+        liveUrl: "https://grocery-shop-dsabbirtanvir.infinityfreeapp.com/",
+        demoUrl: "/grocery/test.mp4"
+
     },
     {
         id: 2,
