@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ProjectNavigation } from "@/components/project-navigation";
 import { Project, ProjectFeature } from "@/data/projects"; // Import types from data source
-
+import { useEffect, useRef, useState } from "react";
 
 // Badge component for tech stack
 const Badge = ({ children }: { children: React.ReactNode }) => {
@@ -25,6 +25,51 @@ interface ProjectDetailProps {
 }
 
 export function ProjectDetail({ project, currentProject, projects }: ProjectDetailProps) {
+  // Lazy loaded video implementation
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoContainerRef = useRef<HTMLDivElement>(null);
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+  // Set up intersection observer for lazy loading
+  useEffect(() => {
+    if (!project.demoUrl) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVideoVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: "100px", // Load video when it's 100px from viewport
+        threshold: 0.1,
+      }
+    );
+
+    if (videoContainerRef.current) {
+      observer.observe(videoContainerRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [project.demoUrl]);
+
+  // Handle video loading event
+  const handleVideoLoaded = () => {
+    setIsVideoLoaded(true);
+  };
+
+  // Handle play on hover or click
+  const handlePlayVideo = () => {
+    if (videoRef.current && isVideoVisible && !isVideoLoaded) {
+      videoRef.current.load();
+      setIsVideoLoaded(true);
+    }
+  };
+
   return (
     <div className="pt-28 pb-16">
       <div className="flex flex-col md:flex-row items-start justify-between gap-4 mb-4">
@@ -188,39 +233,61 @@ export function ProjectDetail({ project, currentProject, projects }: ProjectDeta
         </div>
 
         {/* Project videos */}
-        {/* <div className="mt-16">
-          <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
-            <span className="h-5 w-1 bg-primary rounded-full"></span>
-            Project Demo
-          </h2>
-          
-          <div className="rounded-xl overflow-hidden border border-border">
-            <Video 
-              src="/videos/test.mp4"
-              className="w-full"
-              poster="https://image.mux.com/nSkDBG3RtZM01JOdQQPlEw6OvlkC3ApPYR00E023ZmhomQ/thumbnail.webp"
-              controls
-            />
-            <div className="p-4 bg-card/50 backdrop-blur-sm">
-              <h3 className="text-lg font-medium">Project Demonstration</h3>
-              <p className="text-sm text-muted-foreground mt-1">
-                Watch a walkthrough of the {project.title} project showing the key features in action.
-              </p>
-            </div>
-          </div>
-        </div> */}
-
-
+        {project.demoUrl && (
           <div>
             <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
               <span className="h-5 w-1 bg-primary rounded-full"></span>
               Project Demo
             </h2>
-            <div className="rounded-xl overflow-hidden border border-border">
-              <video controls className="w-full" >
-                <source src={project.demoUrl} type="video/mp4" />
+            <div 
+              ref={videoContainerRef} 
+              className="rounded-xl overflow-hidden border border-border relative group"
+              onClick={handlePlayVideo}
+              onMouseEnter={handlePlayVideo}
+            >
+              {/* Placeholder thumbnail before video loads */}
+              {!isVideoLoaded && (
+                <div className="aspect-video w-full relative bg-black/10 flex items-center justify-center cursor-pointer">
+                  {project.previewImages && project.previewImages[0] && (
+                    <Image
+                      src={project.previewImages[0]}
+                      alt={`${project.title} demo thumbnail`}
+                      fill
+                      className="object-cover opacity-80"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-primary/80 rounded-full flex items-center justify-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="white"
+                        stroke="currentColor"
+                        className="text-white"
+                      >
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                      </svg>
+                    </div>
+                  </div>
+                  <p className="absolute bottom-4 left-4 text-white text-lg font-medium">Click to play demo</p>
+                </div>
+              )}
+              
+              {/* Video element (loads when visible) */}
+              <video 
+                ref={videoRef}
+                controls 
+                className={`w-full transition-opacity duration-500 ${isVideoLoaded ? 'opacity-100' : 'opacity-0 h-0'}`}
+                preload="none"
+                poster={project.previewImages[0]}
+                onLoadedData={handleVideoLoaded}
+              >
+                {isVideoVisible && <source src={project.demoUrl} type="video/mp4" />}
                 Your browser does not support the video tag.
               </video>
+              
               <div className="p-4 bg-card/50 backdrop-blur-sm">
                 <h3 className="text-lg font-medium">Project Demonstration</h3>
                 <p className="text-sm text-muted-foreground mt-1">
@@ -229,10 +296,7 @@ export function ProjectDetail({ project, currentProject, projects }: ProjectDeta
               </div>
             </div>
           </div>
-
- 
-
-
+        )}
 
       </section>
 
