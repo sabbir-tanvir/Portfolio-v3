@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { ProjectNavigation } from "@/components/project-navigation";
 import { Project, ProjectFeature } from "@/data/projects"; // Import types from data source
 import { useEffect, useRef, useState } from "react";
+import { ImageLightbox } from "@/components/ui/image-lightbox";
 
 // Badge component for tech stack
 const Badge = ({ children }: { children: React.ReactNode }) => {
@@ -30,6 +31,14 @@ export function ProjectDetail({ project, currentProject, projects }: ProjectDeta
   const videoContainerRef = useRef<HTMLDivElement>(null);
   const [isVideoVisible, setIsVideoVisible] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  
+  // Background video reference
+  const bgVideoRef = useRef<HTMLVideoElement>(null);
+  const [isBgVideoLoaded, setIsBgVideoLoaded] = useState(false);
+
+  // Lightbox state
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   // Set up intersection observer for lazy loading
   useEffect(() => {
@@ -57,9 +66,35 @@ export function ProjectDetail({ project, currentProject, projects }: ProjectDeta
     };
   }, [project.demoUrl]);
 
+  // Ensure background video plays when component mounts
+  useEffect(() => {
+    const bgVideoElement = bgVideoRef.current;
+    if (bgVideoElement) {
+      // Try to play the background video
+      const playPromise = bgVideoElement.play();
+      
+      // Handle promise to catch any autoplay restrictions
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            // Video started playing successfully
+          })
+          .catch(error => {
+            // Autoplay was prevented, handle as needed
+            console.log("Background video autoplay prevented:", error);
+          });
+      }
+    }
+  }, []);
+
   // Handle video loading event
   const handleVideoLoaded = () => {
     setIsVideoLoaded(true);
+  };
+
+  // Handle background video loaded event
+  const handleBgVideoLoaded = () => {
+    setIsBgVideoLoaded(true);
   };
 
   // Handle play on hover or click
@@ -70,8 +105,22 @@ export function ProjectDetail({ project, currentProject, projects }: ProjectDeta
     }
   };
 
+  // Open lightbox with specific image
+  const openLightbox = (index: number) => {
+    setSelectedImageIndex(index);
+    setLightboxOpen(true);
+  };
+
   return (
     <div className="pt-28 pb-16">
+      {/* Image Lightbox */}
+      <ImageLightbox 
+        images={project.previewImages}
+        initialIndex={selectedImageIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+      />
+
       <div className="flex flex-col md:flex-row items-start justify-between gap-4 mb-4">
         <Link
           href="/projects"
@@ -99,18 +148,33 @@ export function ProjectDetail({ project, currentProject, projects }: ProjectDeta
         </Button>
       </div>
 
-      {/* Hero section */}
-      <div className="w-full relative rounded-lg overflow-hidden mb-12 bg-gradient-to-r from-pink-600/40 to-purple-900/10 dark:bg-gradient-to-r dark:from-gray-600/10 dark:to-purple-900/10 border border-border">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url('${project.previewImages[0]}')` }}
-        ></div>
-        <div className="p-12 md:p-16 relative z-10 flex flex-col items-center justify-center min-h-[300px]">
-          <span className="px-3 py-1 bg-primary/10 backdrop-blur-md text-primary text-xs rounded-full mb-4">
+      {/* Hero section with background video */}
+      <div className="w-full relative rounded-lg overflow-hidden mb-12 bg-gradient-to-r from-gray-600/90 to-purple-900/90 dark:bg-gradient-to-r dark:from-gray-600/90 dark:to-purple-900/90 border border-border">
+        {/* Background video */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          {/* Video element - always displayed */}
+          <video
+            ref={bgVideoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="object-cover w-full h-full opacity-30"
+          >
+            <source src="/grocery/test.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          
+          {/* Gradient overlay to ensure text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-100/20 to-gray-50/40 dark:from-[#0B0B0D]/70 dark:to-[#0B0B0D]/40 z-10"></div>
+        </div>
+
+        <div className="p-12 md:p-16 relative z-20 flex flex-col items-center justify-center min-h-[300px]">
+          <span className="px-3 py-1 bg-primary/10 backdrop-blur-md text-white text-primary text-xs rounded-full mb-4">
             Web Application
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">{project.title}</h1>
-          <p className="text-xl text-center max-w-2xl text-foreground/80 mb-8">{project.subtitle}</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">{project.title}</h1>
+          <p className="text-xl text-center text-white max-w-2xl text-foreground/80 mb-8">{project.subtitle}</p>
 
           {/* Action buttons */}
           <div className="flex gap-4 mt-2">
@@ -216,7 +280,8 @@ export function ProjectDetail({ project, currentProject, projects }: ProjectDeta
           {project.previewImages.map((image: string, index: number) => (
             <div
               key={index}
-              className="relative rounded-xl overflow-hidden border border-border group transition-all duration-300 hover:shadow-xl"
+              className="relative rounded-xl overflow-hidden border border-border group transition-all duration-300 hover:shadow-xl cursor-pointer"
+              onClick={() => openLightbox(index)}
             >
               <Image
                 src={image}
@@ -226,7 +291,7 @@ export function ProjectDetail({ project, currentProject, projects }: ProjectDeta
                 className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <p className="text-white p-6 text-lg font-medium">Screenshot {index + 1}</p>
+                <p className="text-white p-6 text-lg font-medium">Click to enlarge</p>
               </div>
             </div>
           ))}

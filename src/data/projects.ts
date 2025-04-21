@@ -27,7 +27,7 @@ export interface Project {
     githubUrl: string;
     liveUrl: string;
     demoUrl?: string;
-    
+
 }
 
 export const projects: Project[] = [
@@ -88,7 +88,6 @@ export const projects: Project[] = [
         },
         githubUrl: "https://github.com/sabbir-tanvir/Grocery-Shopping-Website",
         liveUrl: "https://grocery-shop-dsabbirtanvir.infinityfreeapp.com/",
-        demoUrl: "/grocery/test.mp4"
 
     },
     {
@@ -152,178 +151,6 @@ export const projects: Project[] = [
     },
     {
         id: 3,
-        slug: "portfolio-website",
-        title: "Portfolio Website",
-        subtitle: "Professional Showcase",
-        category: "Development & Design",
-        year: "2022",
-        image: "/p4.png",
-        previewImages: ["/p4.png", "/portfolio/1.png", "/portfolio/3.png", "/portfolio/2.png",],
-        role: "Frontend Developer",
-        client: "Personal Project",
-        description: "A modern portfolio website showcasing projects and professional experience. Features a clean design with smooth animations and responsive layout.",
-        overview: "Built with HTML, CSS and JS, this portfolio site offers fast performance and seamless page transitions. The responsive design ensures optimal viewing on all devices, while Framer Motion provides engaging animations.",
-        techStack: ["HTML", "CSS", "JS", "Vercel"],
-        features: [
-            {
-                title: "Responsive Design",
-                description: "Optimized for all screen sizes from mobile to large desktop displays.",
-                icon: "M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-            },
-            {
-                title: "Smooth Animations",
-                description: "Subtle and engaging animations enhance the user experience without being distracting.",
-                icon: "M13 10V3L4 14h7v7l9-11h-7z"
-            },
-            {
-                title: "Dark Mode",
-                description: "dark themes for comfortable viewing in any environment.",
-                icon: "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-            },
-            {
-                title: "Contact Form",
-                description: "Interactive contact form for easy communication with visitors.",
-                icon: "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-            }
-        ],
-        implementation: {
-            frontend: [
-                "HTML for semantic structure",
-                "CSS for styling and layout",
-                "JavaScript for interactivity",
-                "CSS for animations"
-            ],
-            deployment: [
-                "Vercel for hosting and deployment",
-                "GitHub for version control",
-
-            ]
-        },
-        githubUrl: "https://github.com/sabbir-tanvir/Portfolio",
-        liveUrl: "https://portfolio-sabbir.vercel.app/"
-    },
-    {
-        id: 4,
-        slug: "sage-ai",
-        title: "Sage AI",
-        subtitle: "Intelligent Assistant",
-        category: "Development & Design",
-        year: "2024",
-        image: "/p33.png",
-        previewImages: ["/sage/1.png", "/sage/2.png", "/sage/3.png", "/p33.png"],
-        role: "AI Developer",
-        client: "Personal Project",
-        description: "An AI assistant application that helps users with various tasks from answering questions to generating content and providing recommendations.",
-        overview: "Powered by advanced natural language processing models, Sage AI delivers intelligent responses to user queries. The application features a conversational interface and can handle multiple types of requests including text generation, data analysis, and information retrieval.",
-        techStack: ["React", "Gemni API", "Axiox", "Convex", "dedent", "uuid", "Tailwind CSS"],
-        features: [
-            {
-                title: "Natural Language Understanding",
-                description: "Advanced AI that comprehends complex queries and provides relevant responses.",
-                icon: "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-            },
-            {
-                title: "Content Generation",
-                description: "Create articles, summaries, and creative content based on user prompts.",
-                icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-            },
-            {
-                title: "Personalized Recommendations",
-                description: "AI learns user preferences to provide increasingly relevant suggestions over time.",
-                icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-            },
-            {
-                title: "Prompt to React Application",
-                description: "Convert user prompts into actionable tasks and provide detailed responses.",
-                icon: "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-            }
-        ],
-        implementation: {
-            frontend: [
-                "React for interactive UI",
-                "Tailwind CSS for styling",
-                "axios data fetching",
-                "Gemni API for AI responses",
-                "dedent for text formatting",
-
-            ],
-            backend: [
-
-                "Gemni API integration",
-                "Convex for DataBases",
-                "uuid for unique identifiers",
-
-            ],
-            deployment: [
-                "Vercel for frontend deployment",
-                "convex for backend deployment",
-                "CI/CD with GitHub Actions"
-            ]
-        },
-        githubUrl: "https://github.com/sabbir-tanvir/Sage-Ai",
-        liveUrl: "https://sageai-xi.vercel.app/"
-    },
-    {
-        id: 5,
-        slug: "anonymous-messenger",
-        title: "Anonymous Messenger",
-        subtitle: "Private Messaging Platform",
-        category: "Development & Design",
-        year: "2024",
-        image: "/p1.png",
-        previewImages: ["/p1.png", "/p1.png"],
-        role: "Full-Stack Developer",
-        client: "Personal Project",
-        description: "This anonymous messaging application allows users to send and receive messages without revealing their identity. Built with privacy in mind, it enables candid communication in a secure environment while maintaining user anonymity throughout the experience.",
-        overview: "Built using React and TypeScript on the frontend with MongoDB as the database, this application provides a seamless anonymous messaging experience. The RESTful API built with Node.js handles message encryption and user authentication while maintaining privacy. Axios is utilized for efficient API communication, ensuring fast message delivery without compromising user identity.",
-        techStack: ["React", "TypeScript", "MongoDB", "Node.js", "Express", "Axios", "Tailwind CSS"],
-        features: [
-            {
-                title: "Secure Authentication",
-                description: "Identity protection with advanced security protocols while maintaining anonymity. Users can create accounts without revealing personal information.",
-                icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-            },
-            {
-                title: "Real-time Messaging",
-                description: "Instant message delivery with real-time notifications for new messages. Messages appear instantly without requiring page refreshes.",
-                icon: "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-            },
-            {
-                title: "Message Encryption",
-                description: "End-to-end encryption ensures messages remain private and secure. Even server administrators cannot access message contents.",
-                icon: "M13 10V3L4 14h7v7l9-11h-7z"
-            },
-            {
-                title: "Self-Destructing Messages",
-                description: "Set messages to automatically delete after being viewed or after a set time period, enhancing privacy and security.",
-                icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-            }
-        ],
-        implementation: {
-            frontend: [
-                "React for component-based UI",
-                "TypeScript for type safety",
-                "Tailwind CSS for styling",
-                "Axios for API requests"
-            ],
-            backend: [
-                "Node.js for server environment",
-                "Express.js for API routing",
-                "MongoDB for data storage",
-                "JWT for authentication"
-            ],
-            deployment: [
-                "Vercel for frontend hosting",
-                "MongoDB Atlas for database",
-                "Render for backend API",
-                "GitHub Actions for CI/CD"
-            ]
-        },
-        githubUrl: "https://github.com/sabbir-tanvir/Send-Me-",
-        liveUrl: "https://sendmee.netlify.app/"
-    },
-    {
-        id: 6,
         slug: "mock-interview-ai",
         title: "Mock Interview AI",
         subtitle: "AI-Powered Interview Practice",
@@ -390,8 +217,183 @@ export const projects: Project[] = [
             ]
         },
         githubUrl: "https://github.com/sabbir-tanvir/Mock-interview",
-        liveUrl: "https://mock-interview-three-alpha.vercel.app/"
+        liveUrl: "https://mock-interview-three-alpha.vercel.app/",
+        demoUrl: "/grocery/test.mp4"
+    },
+
+    {
+        id: 4,
+        slug: "sage-ai",
+        title: "Sage AI",
+        subtitle: "Intelligent Assistant",
+        category: "Development & Design",
+        year: "2024",
+        image: "/p33.png",
+        previewImages: ["/sage/1.png", "/sage/2.png", "/sage/3.png", "/p33.png"],
+        role: "AI Developer",
+        client: "Personal Project",
+        description: "An AI assistant application that helps users with various tasks from answering questions to generating content and providing recommendations.",
+        overview: "Powered by advanced natural language processing models, Sage AI delivers intelligent responses to user queries. The application features a conversational interface and can handle multiple types of requests including text generation, data analysis, and information retrieval.",
+        techStack: ["React", "Gemni API", "Axiox", "Convex", "dedent", "uuid", "Tailwind CSS"],
+        features: [
+            {
+                title: "Natural Language Understanding",
+                description: "Advanced AI that comprehends complex queries and provides relevant responses.",
+                icon: "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+            },
+            {
+                title: "Content Generation",
+                description: "Create articles, summaries, and creative content based on user prompts.",
+                icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+            },
+            {
+                title: "Personalized Recommendations",
+                description: "AI learns user preferences to provide increasingly relevant suggestions over time.",
+                icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+            },
+            {
+                title: "Prompt to React Application",
+                description: "Convert user prompts into actionable tasks and provide detailed responses.",
+                icon: "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+            }
+        ],
+        implementation: {
+            frontend: [
+                "React for interactive UI",
+                "Tailwind CSS for styling",
+                "axios data fetching",
+                "Gemni API for AI responses",
+                "dedent for text formatting",
+
+            ],
+            backend: [
+
+                "Gemni API integration",
+                "Convex for DataBases",
+                "uuid for unique identifiers",
+
+            ],
+            deployment: [
+                "Vercel for frontend deployment",
+                "convex for backend deployment",
+                "CI/CD with GitHub Actions"
+            ]
+        },
+        githubUrl: "https://github.com/sabbir-tanvir/Sage-Ai",
+        liveUrl: "https://sageai-xi.vercel.app/"
+    },
+    {
+        id: 5,
+        slug: "portfolio-website",
+        title: "Portfolio Website",
+        subtitle: "Professional Showcase",
+        category: "Development & Design",
+        year: "2022",
+        image: "/p4.png",
+        previewImages: ["/p4.png", "/portfolio/1.png", "/portfolio/3.png", "/portfolio/2.png",],
+        role: "Frontend Developer",
+        client: "Personal Project",
+        description: "A modern portfolio website showcasing projects and professional experience. Features a clean design with smooth animations and responsive layout.",
+        overview: "Built with HTML, CSS and JS, this portfolio site offers fast performance and seamless page transitions. The responsive design ensures optimal viewing on all devices, while Framer Motion provides engaging animations.",
+        techStack: ["HTML", "CSS", "JS", "Vercel"],
+        features: [
+            {
+                title: "Responsive Design",
+                description: "Optimized for all screen sizes from mobile to large desktop displays.",
+                icon: "M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+            },
+            {
+                title: "Smooth Animations",
+                description: "Subtle and engaging animations enhance the user experience without being distracting.",
+                icon: "M13 10V3L4 14h7v7l9-11h-7z"
+            },
+            {
+                title: "Dark Mode",
+                description: "dark themes for comfortable viewing in any environment.",
+                icon: "M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            },
+            {
+                title: "Contact Form",
+                description: "Interactive contact form for easy communication with visitors.",
+                icon: "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+            }
+        ],
+        implementation: {
+            frontend: [
+                "HTML for semantic structure",
+                "CSS for styling and layout",
+                "JavaScript for interactivity",
+                "CSS for animations"
+            ],
+            deployment: [
+                "Vercel for hosting and deployment",
+                "GitHub for version control",
+
+            ]
+        },
+        githubUrl: "https://github.com/sabbir-tanvir/Portfolio",
+        liveUrl: "https://portfolio-sabbir.vercel.app/"
+    },
+    {
+        id: 6,
+        slug: "anonymous-messenger",
+        title: "Anonymous Messenger",
+        subtitle: "Private Messaging Platform",
+        category: "Development & Design",
+        year: "2024",
+        image: "/p1.png",
+        previewImages: ["/p1.png", "/p1.png"],
+        role: "Full-Stack Developer",
+        client: "Personal Project",
+        description: "This anonymous messaging application allows users to send and receive messages without revealing their identity. Built with privacy in mind, it enables candid communication in a secure environment while maintaining user anonymity throughout the experience.",
+        overview: "Built using React and TypeScript on the frontend with MongoDB as the database, this application provides a seamless anonymous messaging experience. The RESTful API built with Node.js handles message encryption and user authentication while maintaining privacy. Axios is utilized for efficient API communication, ensuring fast message delivery without compromising user identity.",
+        techStack: ["React", "TypeScript", "MongoDB", "Node.js", "Express", "Axios", "Tailwind CSS"],
+        features: [
+            {
+                title: "Secure Authentication",
+                description: "Identity protection with advanced security protocols while maintaining anonymity. Users can create accounts without revealing personal information.",
+                icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+            },
+            {
+                title: "Real-time Messaging",
+                description: "Instant message delivery with real-time notifications for new messages. Messages appear instantly without requiring page refreshes.",
+                icon: "M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+            },
+            {
+                title: "Message Encryption",
+                description: "End-to-end encryption ensures messages remain private and secure. Even server administrators cannot access message contents.",
+                icon: "M13 10V3L4 14h7v7l9-11h-7z"
+            },
+            {
+                title: "Self-Destructing Messages",
+                description: "Set messages to automatically delete after being viewed or after a set time period, enhancing privacy and security.",
+                icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+            }
+        ],
+        implementation: {
+            frontend: [
+                "React for component-based UI",
+                "TypeScript for type safety",
+                "Tailwind CSS for styling",
+                "Axios for API requests"
+            ],
+            backend: [
+                "Node.js for server environment",
+                "Express.js for API routing",
+                "MongoDB for data storage",
+                "JWT for authentication"
+            ],
+            deployment: [
+                "Vercel for frontend hosting",
+                "MongoDB Atlas for database",
+                "Render for backend API",
+                "GitHub Actions for CI/CD"
+            ]
+        },
+        githubUrl: "https://github.com/sabbir-tanvir/Send-Me-",
+        liveUrl: "https://sendmee.netlify.app/"
     }
+
 ];
 
 // Helper function to get project by slug
