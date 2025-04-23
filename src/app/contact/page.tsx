@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Toaster, toast } from 'sonner';
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -79,12 +80,13 @@ export default function ContactPage() {
     e.preventDefault();
     console.log("Form submitted:", formData);
     // In a real implementation, you would send this data to your backend
-    alert("Thank you for your message! I'll get back to you soon.");
+    toast.success("Thank you for your message! I'll get back to you soon.");
     setFormData({ name: "", email: "", message: "" });
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-[#0B0B0D]">
+      <Toaster richColors />
       <Navbar />
       <main className="flex-1 pt-16">
         <section className="py-20 ">
