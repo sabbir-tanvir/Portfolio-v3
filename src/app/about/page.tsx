@@ -155,7 +155,7 @@ export default function AboutPage() {
                   I collaborate with brands globally to design && develop impactful, mission-focused websites
                   that drive results and achieve business goals.
                 </p>
-                <Link href="/resume" target="_blank">
+                <Link href="/resume" >
                   <Button className="rounded-full bg-black text-white  dark:bg-white dark:text-black hover:bg-gray-700">
                     My Resume
                   </Button>
