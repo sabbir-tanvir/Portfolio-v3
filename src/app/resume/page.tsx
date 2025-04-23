@@ -2,7 +2,6 @@
 
 import Navbar from '@/components/navbar';
 import React from 'react';
-import { Download } from 'lucide-react';
 
 const ResumePage = () => {
     return (
@@ -10,58 +9,6 @@ const ResumePage = () => {
             <div className='bg-white dark:bg-[#0B0B0D]'>
                 <Navbar />
 
-                {/* Floating Download Button */}
-                <button
-                    onClick={() => {
-                        // This function will be called on the client side
-                        if (typeof window !== 'undefined') {
-                            // Import html2pdf dynamically to avoid SSR issues
-                            import('html2pdf.js').then((html2pdf) => {
-                                const element = document.getElementById('resume-content');
-                                
-                                // Check if element exists before accessing its properties
-                                if (!element) {
-                                    console.error('Resume content element not found');
-                                    return;
-                                }
-                                
-                                // Updated options to add a small bottom margin and prevent blank second page
-                                const opt = {
-                                    // Custom margins - add small margin to bottom only
-                                    margin: [0, 0, 10, 0], // [top, right, bottom, left] in mm
-                                    filename: 'Sabbir_Tanvir_Resume.pdf',
-                                    image: { type: 'jpeg', quality: 1 },
-                                    html2canvas: { 
-                                        scale: 2, 
-                                        useCORS: true,
-                                        letterRendering: true,
-                                        // Calculate exact height to prevent blank page
-                                        height: element.offsetHeight,
-                                        width: element.offsetWidth,
-                                        windowWidth: element.scrollWidth,
-                                        windowHeight: element.scrollHeight
-                                    },
-                                    jsPDF: { 
-                                        unit: 'mm', 
-                                        format: 'a4',
-                                        orientation: 'portrait',
-                                        compress: true,
-                                        precision: 16,
-                                        // Prevent blank second page
-                                        pagesplit: true
-                                    },
-                                    pagebreak: { mode: 'avoid-all' }
-                                };
-                                
-                                html2pdf.default().set(opt).from(element).save();
-                            });
-                        }
-                    }}
-                    className="fixed right-5 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg z-50 flex items-center justify-center transition-all duration-300 hover:scale-110"
-                    aria-label="Download Resume as PDF"
-                >
-                    <Download size={24} />
-                </button>
 
                 {/* Resume Page start */}
                 <div id="resume-content" className="max-w-4xl mx-auto p-8 py-16 dark:bg-[#19191e] shadow-2xl shadow-gray-400 dark:shadow-gray-900">
