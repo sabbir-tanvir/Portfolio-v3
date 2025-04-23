@@ -19,25 +19,38 @@ const ResumePage = () => {
                             import('html2pdf.js').then((html2pdf) => {
                                 const element = document.getElementById('resume-content');
                                 
-                                // Updated options to preserve layout and remove margins
+                                // Check if element exists before accessing its properties
+                                if (!element) {
+                                    console.error('Resume content element not found');
+                                    return;
+                                }
+                                
+                                // Updated options to add a small bottom margin and prevent blank second page
                                 const opt = {
-                                    margin: 0, // Remove margins
+                                    // Custom margins - add small margin to bottom only
+                                    margin: [0, 0, 10, 0], // [top, right, bottom, left] in mm
                                     filename: 'Sabbir_Tanvir_Resume.pdf',
-                                    image: { type: 'jpeg', quality: 1 }, // Higher quality
+                                    image: { type: 'jpeg', quality: 1 },
                                     html2canvas: { 
-                                        scale: 3, 
+                                        scale: 2, 
                                         useCORS: true,
                                         letterRendering: true,
-                                        // Ensure layout preservation
+                                        // Calculate exact height to prevent blank page
+                                        height: element.offsetHeight,
+                                        width: element.offsetWidth,
                                         windowWidth: element.scrollWidth,
                                         windowHeight: element.scrollHeight
                                     },
                                     jsPDF: { 
-                                        unit: 'px', 
-                                        format: [element.scrollWidth, element.scrollHeight],
+                                        unit: 'mm', 
+                                        format: 'a4',
                                         orientation: 'portrait',
-                                        hotfixes: ['px_scaling']
-                                    }
+                                        compress: true,
+                                        precision: 16,
+                                        // Prevent blank second page
+                                        pagesplit: true
+                                    },
+                                    pagebreak: { mode: 'avoid-all' }
                                 };
                                 
                                 html2pdf.default().set(opt).from(element).save();
