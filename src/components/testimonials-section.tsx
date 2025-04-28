@@ -11,6 +11,14 @@ import Image from "next/image";
 const testimonials = [
   {
     id: 1,
+    name: "Md Mahfuz",
+    position: "Team Mate",
+    content:
+      "I am amazed at Sabbir's ability to create intriguing designs. He is really cool guy to work with and so Leader like attitude",
+    image: "/mahfuz.jpg",
+  },
+  {
+    id: 1,
     name: "Rummon Khan",
     position: "Team Mate",
     content:

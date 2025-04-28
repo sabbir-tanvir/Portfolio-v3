@@ -3,6 +3,12 @@ import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 export function AnimatedTestimonialsDemo() {
   const testimonials = [
     {
+      quote: "I am amazed at Sabbir's ability to create intriguing designs. He is really cool guy to work with and so Leader like attitude",
+      name: "Md Mahfuz",
+      designation: "Product Designer at TechFlow",
+      src: "/mahfuz.jpg",
+    },
+    {
         quote: "Sabbir leads with a positive attitude and a willingness to help others. He is a great team player and is always willing to go the extra mile to help out his team.",
         name: "Selim Reza",
         designation: "Operations Director at CloudScale",
