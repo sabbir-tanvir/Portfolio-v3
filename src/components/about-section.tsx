@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { GlowingEffect } from "./ui/glowing-effect";
+import Link from "next/link";
 
 export function AboutSection() {
   const { theme } = useTheme();
@@ -122,7 +123,9 @@ export function AboutSection() {
             </div>
 
             <div className="flex flex-wrap gap-4">
+              <Link href={"/resume"}>
               <Button>Download CV</Button>
+              </Link>
               <Button variant="outline"><a href="https://www.linkedin.com/in/sabbir-tanvir/">View LinkedIn</a></Button>
             </div>
           </motion.div>
