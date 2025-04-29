@@ -109,7 +109,7 @@ export default function Navbar() {
                       <div className="flex justify-end mb-8">
                         <SheetTrigger asChild>
                           <Button variant="ghost" size="icon" className="p-0">
-                            <X size={20} />
+                            {/* <X size={20} /> */}
                           </Button>
                         </SheetTrigger>
                       </div>

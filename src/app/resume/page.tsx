@@ -4,11 +4,39 @@ import Navbar from '@/components/navbar';
 import React from 'react';
 
 const ResumePage = () => {
+    // Function to handle resume download
+    const handleDownload = () => {
+        // Path to your resume file in the public folder
+        const resumePath = '/resume.pdf';
+        
+        // Create an anchor element
+        const link = document.createElement('a');
+        link.href = resumePath;
+        link.download = 'Sabbir_Tanvir_Resume.pdf';
+        
+        // Append to body, click and remove
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <>
             <div className='bg-white dark:bg-[#0B0B0D]'>
                 <Navbar />
 
+                {/* Floating Download Button */}
+                <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50">
+                    <button 
+                        className="flex items-center justify-center w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+                        title="Download Resume"
+                        onClick={handleDownload}
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </button>
+                </div>
 
                 {/* Resume Page start */}
                 <div id="resume-content" className="max-w-4xl mx-auto p-4 sm:p-8 py-10 sm:py-16 dark:bg-[#19191e] shadow-2xl shadow-gray-400 dark:shadow-gray-900">
@@ -213,7 +241,6 @@ const ResumePage = () => {
 
             </div>
         </>
-
     );
 };
 
